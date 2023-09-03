@@ -57,7 +57,7 @@ const OffCanvasMenu = () => {
                                             </li>
                                         </ul>
                                     </li> */}
-                                    <li className="nav-item dropdown">
+                                    {/* <li className="nav-item dropdown">
                                         <Link className="nav-link dropdown-toggle" to="/research#" role="button" data-bs-toggle="dropdown" aria-expanded="false" onClick={() => setIconToggle2(!iconToggle2)}>
                                             Research
                                             {iconToggle2 ? <i className="fa-solid fa-plus"></i> : <i className="fa-solid fa-minus"> </i>}
@@ -70,8 +70,8 @@ const OffCanvasMenu = () => {
                                                 <Link className={location.pathname === '/research-details' ? 'dropdown-item active' : 'dropdown-item'} to="/research-details#">Research Details</Link>
                                             </li>
                                         </ul>
-                                    </li>
-                                    <li className="nav-item dropdown">
+                                    </li> */}
+                                    {/* <li className="nav-item dropdown">
                                         <Link className="nav-link dropdown-toggle" to="/course#" role="button" data-bs-toggle="dropdown" aria-expanded="false" onClick={() => setIconToggle3(!iconToggle3)}>
                                             Course
                                             {iconToggle3 ? <i className="fa-solid fa-plus"></i> : <i className="fa-solid fa-minus"></i>}
@@ -90,8 +90,8 @@ const OffCanvasMenu = () => {
                                                 <Link className={location.pathname === '/course-details' ? 'dropdown-item active' : 'dropdown-item'} to="/course-details#">Course Details</Link>
                                             </li>
                                         </ul>
-                                    </li>
-                                    <li className="nav-item dropdown">
+                                    </li> */}
+                                    {/* <li className="nav-item dropdown">
                                         <Link className="nav-link dropdown-toggle" to="/events#" role="button" data-bs-toggle="dropdown" aria-expanded="false" onClick={() => setIconToggle4(!iconToggle4)}>
                                             Events
                                             {iconToggle4 ? <i className="fa-solid fa-plus"></i> : <i className="fa-solid fa-minus"></i>}
@@ -107,8 +107,8 @@ const OffCanvasMenu = () => {
                                                 <Link className={location.pathname === '/event-3-column' ? 'dropdown-item active' : 'dropdown-item'} to="/event-3-column#">Event 3 Column</Link>
                                             </li>
                                         </ul>
-                                    </li>
-                                    <li className="nav-item dropdown">
+                                    </li> */}
+                                    {/* <li className="nav-item dropdown">
                                         <Link className="nav-link dropdown-toggle" to="/pages#" role="button" data-bs-toggle="dropdown" aria-expanded="false" onClick={() => setIconToggle5(!iconToggle5)}>
                                             Pages
                                             {iconToggle5 ? <i className="fa-solid fa-plus"></i> : <i className="fa-solid fa-minus"></i>}
@@ -130,8 +130,8 @@ const OffCanvasMenu = () => {
                                                 <Link className={location.pathname === '/error' ? 'dropdown-item active' : 'dropdown-item'} to="/error#">Error</Link>
                                             </li>
                                         </ul>
-                                    </li>
-                                    <li className="nav-item dropdown">
+                                    </li> */}
+                                    {/* <li className="nav-item dropdown">
                                         <Link className="nav-link dropdown-toggle" to="/blog#" role="button" data-bs-toggle="dropdown" aria-expanded="false" onClick={() => setIconToggle6(!iconToggle6)}>
                                             Blog
                                             {iconToggle6 ? <i className="fa-solid fa-plus"></i> : <i className="fa-solid fa-minus"></i>}
@@ -156,9 +156,27 @@ const OffCanvasMenu = () => {
                                                 <Link className={location.pathname === '/blog-details' ? 'dropdown-item active' : 'dropdown-item'} to="/blog-details#">Blog Details</Link>
                                             </li>
                                         </ul>
+                                    </li> */}
+                                    <li>
+                                        <Link className={location.pathname === '/course' ? 'nav-link active' : 'nav-link'} to="/course#">Courses</Link>
+                                    </li>
+                                    <li>
+                                        <Link className={location.pathname === '/events' ? 'nav-link active' : 'nav-link'} to="/events#">Events</Link>
+                                    </li>
+                                    <li>
+                                        <Link className={location.pathname === '/faq' ? 'nav-link active' : 'nav-link'} to="/faq#">FAQs</Link>
+                                    </li>
+                                    <li>
+                                        <Link className={location.pathname === '/about' ? 'nav-link active' : 'nav-link'} to="/about#">About Us</Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link className={location.pathname === '/contact' ? 'nav-link active' : 'nav-link'} to="/contact#">Contact</Link>
+                                        <Link className={location.pathname === '/contact' ? 'nav-link active' : 'nav-link'} to="/contact#">Contact Us</Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link className={location.pathname === '/signup' ? 'nav-link active' : 'nav-link'} to="/signup#">Sign Up</Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link className={location.pathname === '/signin' ? 'nav-link active' : 'nav-link'} to="/signin#">Sign In</Link>
                                     </li>
                                 </ul>
                             </div>

@@ -17,6 +17,8 @@ const RegistrationForm = () => {
                     <div className="join-us-field">
                         <div className="single-input-field">
                             <input type="text" name='first-name' autoComplete='off' placeholder="First Name *" required />
+                        </div>
+                        <div className="single-input-field">
                             <input type="text" name='last-name' autoComplete='off' placeholder="Last Name *" required />
                         </div>
                         <div className="single-input-field">

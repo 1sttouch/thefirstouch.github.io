@@ -46,6 +46,7 @@ import Contact from './pages/Contact';
 import ScrollUpBtn from './components/ScrollUpBtn';
 import PreLoader from './components/PreLoader';
 import SignUp from './pages/SignUp';
+import SignIn from './pages/SignIn';
 
 // Components 
 
@@ -95,6 +96,7 @@ function App() {
             <Route path='/blog-details' element={<BlogDetails />}> </Route>
             <Route path='/contact' element={<Contact />}> </Route>
             <Route path='/signup' element={<SignUp />}> </Route>
+            <Route path='/signin' element={<SignIn />}> </Route>
             <Route path='*' element={<Error404 />}> </Route>
           </Routes>
           <ScrollUpBtn />

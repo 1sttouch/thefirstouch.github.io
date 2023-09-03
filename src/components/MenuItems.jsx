@@ -34,7 +34,7 @@ const MenuItems = () => {
                                 <li><Link to="/research-details#">Research Details</Link></li>
                             </ul>
                         </li> */}
-                        <li><Link to="/course#">Course</Link>
+                        <li><Link to="/course#">Courses</Link>
                             {/* <ul>
                                 <li><Link to="/course#">Course Page</Link></li>
                                 <li><Link to="/course-isotop#">Course isotop</Link></li>
@@ -42,7 +42,7 @@ const MenuItems = () => {
                                 <li><Link to="/course-details#">Course Details</Link></li>
                             </ul> */}
                         </li>
-                        <li><Link to="/events#">event</Link>
+                        <li><Link to="/events#">Events</Link>
                             {/* <ul>
                                 <li><Link to="/events#">Event Page</Link></li>
                                 <li><Link to="/event-with-sidebar#">Event With Sidebar</Link></li>
@@ -68,7 +68,10 @@ const MenuItems = () => {
                                 <li><Link to="/blog-details#">blog Details</Link></li>
                             </ul>
                         </li> */}
-                        <li><Link to="/contact#">Contact</Link></li>
+                        <li><Link to="/about#">About Us</Link></li>
+                        <li><Link to="/contact#">Contact Us</Link></li>
+                        <li><Link to="/signup#">Sign Up</Link></li>
+                        <li><Link to="/signin#">Sign In</Link></li>
                     </ul>
                 </nav>
 

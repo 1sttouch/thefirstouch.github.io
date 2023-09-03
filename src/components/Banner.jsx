@@ -25,7 +25,7 @@ const Banner = () => {
                     slidesToSlide={1}
                     showDots={false}
                     swipeable={true}
-                    autoPlay={false}
+                    autoPlay={true}
                     customRightArrow={<CustomRightArrow />}
                     customLeftArrow={<CustomLeftArrow />}
                     autoPlaySpeed={3000}
