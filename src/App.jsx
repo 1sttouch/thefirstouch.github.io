@@ -47,6 +47,9 @@ import ScrollUpBtn from './components/ScrollUpBtn';
 import PreLoader from './components/PreLoader';
 import SignUp from './pages/SignUp';
 import SignIn from './pages/SignIn';
+import UserHome from './pages/UserHome';
+import UserProfile from './pages/UserProfile';
+import UserTouchPoints from './pages/UserTouchPoints';
 
 // Components 
 
@@ -71,6 +74,8 @@ function App() {
           </Helmet>
 
           <Routes>
+            <Route path='*' element={<Error404 />}> </Route>
+
             <Route path='/' element={<Home2 />}> </Route>
             <Route path='/home' element={<Home2 />}> </Route>
 
@@ -97,7 +102,11 @@ function App() {
             <Route path='/contact' element={<Contact />}> </Route>
             <Route path='/signup' element={<SignUp />}> </Route>
             <Route path='/signin' element={<SignIn />}> </Route>
-            <Route path='*' element={<Error404 />}> </Route>
+
+
+            <Route path='/user-home' element={<UserHome />}> </Route>
+            <Route path='/user-profile' element={<UserProfile />}> </Route>
+            <Route path='/user-touchpoints' element={<UserTouchPoints />}> </Route>
           </Routes>
           <ScrollUpBtn />
           <ToastContainer />
