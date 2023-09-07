@@ -50,6 +50,7 @@ import SignIn from './pages/SignIn';
 import UserHome from './pages/UserHome';
 import UserProfile from './pages/UserProfile';
 import UserTouchPoints from './pages/UserTouchPoints';
+import JourneyView from './components/user/journey/JourneyView';
 
 // Components 
 
@@ -107,6 +108,7 @@ function App() {
             <Route path='/user-home' element={<UserHome />}> </Route>
             <Route path='/user-profile' element={<UserProfile />}> </Route>
             <Route path='/user-touchpoints' element={<UserTouchPoints />}> </Route>
+            <Route path='user-touchpoints/touchpoint' element={<JourneyView />}> </Route>
           </Routes>
           <ScrollUpBtn />
           <ToastContainer />

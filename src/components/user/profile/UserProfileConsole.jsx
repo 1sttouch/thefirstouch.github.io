@@ -1,9 +1,8 @@
 import React from 'react';
-import ContactInfo from './user/ContactInfo';
-import ChangePassword from './user/ChangePassword';
-import RequestCallBack from './user/RequestCallBack';
-import CourseReview from './CourseReview';
-import CourseWriteReview from './CourseWriteReview';
+import ContactInfo from './ContactInfo';
+import ChangePassword from './ChangePassword';
+import RequestCallBack from './RequestCallBack';
+
 
 const UserProfileConsole = () => {
     return (
