@@ -51,6 +51,7 @@ import UserHome from './pages/UserHome';
 import UserProfile from './pages/UserProfile';
 import UserTouchPoints from './pages/UserTouchPoints';
 import JourneyView from './components/user/journey/JourneyView';
+import React from 'react';
 
 // Components 
 

@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { toast } from 'react-toastify';
+import { TextField } from '@mui/material';
 
 const RegistrationForm = () => {
-
+    
     const handleSubmit = (event) => {
         event.preventDefault()
         event.target.reset()
@@ -27,6 +28,35 @@ const RegistrationForm = () => {
                         <div className="single-input-field">
                             <input type="number" name='phone' autoComplete='off' placeholder="Phone No" required />
                         </div>
+                        <div className="single-input-field">
+                        <TextField
+                            variant='outlined'
+                            id="date-of-birt"
+                            type="date"     
+                            label="Date of Birth *"
+                            sx={{
+                                width: "100%",
+                                borderRadius: 0,
+                                border : 'none',
+                                padding: '0px 0px',
+                                margin: '10px 0px',                        
+                            }}        
+                            InputLabelProps={{
+                                shrink: true,
+                            }}
+                            InputProps={{
+                                sx:{
+                                    width: "100%",
+                                    borderRadius: 0,
+                                    border : '0px solid #ddd',
+                                    "&:hover": {
+                                        border: "0px solid #ddd",
+                                    },
+                                }
+                            }}
+                            
+                        />
+                        </div>                        
                         <button className='register-btn' type="submit" name='submit'>Register Now </button>
                     </div>
                 </form>

@@ -43,8 +43,8 @@ const JoinUs = () => {
                                                         showDots={false}
                                                         swipeable={true}
                                                         autoPlay={false}
-                                                        customRightArrow={<CustomRightArrow />}
-                                                        customLeftArrow={<CustomLeftArrow />}
+                                                        customRightArrow={<CustomRightArrow onClick={undefined} />}
+                                                        customLeftArrow={<CustomLeftArrow onClick={undefined} />}
                                                         autoPlaySpeed={3000}
                                                         responsive={{
                                                             desktop: {

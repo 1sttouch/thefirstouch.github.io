@@ -2,11 +2,13 @@ import React from 'react';
 import ContactInfo from './ContactInfo';
 import ChangePassword from './ChangePassword';
 import RequestCallBack from './RequestCallBack';
+import BreadCrumb from '../../BreadCrumb';
 
 
 const UserProfileConsole = () => {
     return (
         <>
+            <BreadCrumb pageTitle="Profile" />
             <section className="course-details-page pt-100 pb-70">
                 <div className="container">
                     <div className="row">
@@ -29,17 +31,17 @@ const UserProfileConsole = () => {
                             <div className="tab-content" id="myTabContent">
 
                                 {/* --- Contact Info --- */}
-                                <div id="contact-info-tab-pane" tabIndex="0" className="tab-pane fade show active" role="tabpanel" aria-labelledby="contact-info-tab">
+                                <div id="contact-info-tab-pane" tabIndex={0} className="tab-pane fade show active" role="tabpanel" aria-labelledby="contact-info-tab">
                                 <ContactInfo />
                                 </div>
 
                                 {/* --- Change Password --- */}
-                                <div id="change-pwd-tab-pane" tabIndex="0" className="tab-pane fade" role="tabpanel" aria-labelledby="change-pwd-tab">
+                                <div id="change-pwd-tab-pane" tabIndex={0} className="tab-pane fade" role="tabpanel" aria-labelledby="change-pwd-tab">
                                     <ChangePassword />
                                 </div>
 
                                 {/* --- Request Callback --- */}
-                                <div id="req-call-bck-tab-pane" tabIndex="0" className="tab-pane fade" role="tabpanel" aria-labelledby="req-call-bck-tab">
+                                <div id="req-call-bck-tab-pane" tabIndex={0} className="tab-pane fade" role="tabpanel" aria-labelledby="req-call-bck-tab">
                                     <RequestCallBack />
                                 </div>
 

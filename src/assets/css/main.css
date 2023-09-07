@@ -2873,6 +2873,13 @@ h1.join-us-form-title {
 	background: #ffffff;
 }
 
+.join-us-field input[type="text"]:hover,
+.join-us-field input[type="number"]:hover,
+.join-us-field input[type="password"]:hover,
+.join-us-field input[type="email"]:hover{
+	border-color: black;
+}
+
 .join-us-field input[type="text"],
 .join-us-field input[type="number"],
 .join-us-field input[type="password"],
