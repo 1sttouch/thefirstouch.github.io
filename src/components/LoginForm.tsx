@@ -1,12 +1,55 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
+import useFetch from '../hook/useFetch';
+import { API }  from '../common/Constants'
 
-const LoginForm = () => {
+interface Props {
+    setProgress: (porgress: boolean)=>{}
+    onSuccess: (data: any)=>{}
+}
+
+const LoginForm = ({setProgress, onSuccess}) => {
+
+    const {isLoading, error, data, status, callFetch } = useFetch();
+
+    const[username, setUserName] = useState<string | undefined>(undefined);
+    const[password, setPassword] = useState<string | undefined>(undefined);
+    
+    useEffect(() => {
+        setProgress(isLoading)
+    }, [isLoading]);
+    
+    useEffect(() => {
+        if(data && status && status < 299){
+            reset();
+            onSuccess(data);
+        }
+    }, [data]);
+
+    useEffect(() => {
+        if(error){
+            toast(error.response.data,{position:'bottom-right'})
+        }
+    }, [error]);
+
+    const reset = () => {
+        setUserName(undefined)
+        setPassword(undefined)
+    }
+
 
     const handleSubmit = (event) => {
         event.preventDefault()
         event.target.reset()
-        toast("Login Successful",{position:'bottom-right'})
+        callFetch(API.LOGIN,
+            'POST',
+            null,
+            null,
+            {
+                username: username,
+                password: password
+            }
+        );
     }
 
     return (
@@ -16,10 +59,12 @@ const LoginForm = () => {
                 <form onSubmit={handleSubmit}>
                     <div className="join-us-field">
                         <div className="single-input-field">
-                            <input type="text" name='user-name' autoComplete='off' placeholder="User Name *" required />
+                            <input type="text" name='user-name' autoComplete='off' placeholder="User Name *" required
+                            onChange={(e)=>setUserName(e.target.value)} value={username} />
                         </div>
                         <div className="single-input-field">
-                            <input type="password" name='password' autoComplete='off' placeholder="Password *" required={true}/>
+                            <input type="password" name='password' autoComplete='off' placeholder="Password *" required={true}
+                            onChange={(e)=>setPassword(e.target.value)} value={password}/>
                         </div>
                         <button className='register-btn' type="submit" name='submit'>Login Now</button>
                     </div>

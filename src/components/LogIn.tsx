@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Fade } from 'react-reveal';
 import InstructorData from "../jsonData/InstructorData.json"
 import LoginForm from './LoginForm';
 import SingleAddedStudent from './SingleAddedStudent';
 import Carousel from 'react-multi-carousel';
+import { useNavigate } from 'react-router-dom';
+import Spinner from './Spinner';
 
 const LogIn = () => {
-
+    const [inProgress, setProgress] = useState<boolean>(false);
+    const navigate = useNavigate();
+    
     const CustomRightArrow = ({ onClick }) => {
         return <button className='commonArrow arrowRight' onClick={() => onClick()}><i className="fa-solid fa-chevron-right"></i></button>;
     };
@@ -16,8 +20,14 @@ const LogIn = () => {
 
     };
 
+    const onSuccess = (data) => {
+        localStorage.setItem('token',data?.token)
+        navigate('/user-home');
+    };
+
     return (
         <>
+            <Spinner show={inProgress} />
             <div className="join-us-sec">
                 <div className="join-us-sec-overlay"></div>
                 <div className="container">
@@ -43,8 +53,8 @@ const LogIn = () => {
                                                         showDots={false}
                                                         swipeable={true}
                                                         autoPlay={false}
-                                                        customRightArrow={<CustomRightArrow />}
-                                                        customLeftArrow={<CustomLeftArrow />}
+                                                        customRightArrow={<CustomRightArrow onClick={undefined} />}
+                                                        customLeftArrow={<CustomLeftArrow onClick={undefined} />}
                                                         autoPlaySpeed={3000}
                                                         responsive={{
                                                             desktop: {
@@ -96,7 +106,7 @@ const LogIn = () => {
 
                         <div className="col-lg-5 col-12">
                             <Fade right>
-                                <LoginForm />
+                                <LoginForm setProgress={setProgress} onSuccess={onSuccess}/>
                             </Fade>
                         </div>
                     </div>

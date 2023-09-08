@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Fade } from 'react-reveal';
 import InstructorData from "../jsonData/InstructorData.json"
 import RegistrationForm from './RegistrationForm';
 import SingleAddedStudent from './SingleAddedStudent';
 import Carousel from 'react-multi-carousel';
+import { Backdrop, CircularProgress } from '@mui/material';
+import Spinner from './Spinner';
+import { useNavigate } from 'react-router-dom';
 
 const JoinUs = () => {
+
+    const [inProgress, setProgress] = useState<boolean>(false);
+    const navigate = useNavigate();
 
     const CustomRightArrow = ({ onClick }) => {
         return <button className='commonArrow arrowRight' onClick={() => onClick()}><i className="fa-solid fa-chevron-right"></i></button>;
@@ -16,8 +22,14 @@ const JoinUs = () => {
 
     };
 
+    const onSuccess = (data) => {
+        localStorage.setItem('token',data?.token)
+        navigate('/user-home');
+    };
+
     return (
         <>
+            <Spinner show={inProgress} />
             <div className="join-us-sec">
                 <div className="join-us-sec-overlay"></div>
                 <div className="container">
@@ -96,7 +108,7 @@ const JoinUs = () => {
 
                         <div className="col-lg-5 col-12">
                             <Fade right>
-                                <RegistrationForm />
+                                <RegistrationForm setProgress={setProgress} onSuccess={onSuccess}/>
                             </Fade>
                         </div>
                     </div>

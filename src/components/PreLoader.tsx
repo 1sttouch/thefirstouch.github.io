@@ -8,14 +8,8 @@ const PreLoader = () => {
                     <div className="animation-preloader">
                         <div className="spinner"></div>
                         <div className="txt-loading">
-                            <span data-text-preloader="F" className="letters-loading">
-                                F
-                            </span>
-                            <span data-text-preloader="I" className="letters-loading">
-                                I
-                            </span>
-                            <span data-text-preloader="R" className="letters-loading">
-                                R
+                            <span data-text-preloader="1" className="letters-loading">
+                                1
                             </span>
                             <span data-text-preloader="S" className="letters-loading">
                                 S
