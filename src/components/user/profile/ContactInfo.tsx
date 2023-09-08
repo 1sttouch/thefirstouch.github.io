@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
+import { toast } from 'react-toastify';
 
 const ContactInfo = () => {
     const [enableEdit,setEnableEdit] = useState(false) ;
