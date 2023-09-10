@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ContactForm from './ContactForm';
+import Spinner from './Spinner';
+import { showMessage } from '../common/Utils';
+
 
 const ContactContent = () => {
+    const [inProgress, setProgress] = useState<boolean>(true);
+
+    const onSuccess = (data) => {
+        showMessage("Thanks for contacting us",'SUCCESS')
+    };
+    
     return (
         <>
+            <Spinner show={inProgress} />
             <section className="contact-page-sec pt-100 pb-100">
                 <div className="container">
                     <div className="row">
@@ -52,7 +62,7 @@ const ContactContent = () => {
                         </div>
                     </div>
                     <div className="row">
-                        <ContactForm />
+                        <ContactForm onSuccess={onSuccess} setProgress={setProgress}/>
                     </div>
                 </div>
             </section>

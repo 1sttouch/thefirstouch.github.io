@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
-import { toast } from 'react-toastify';
+import { showMessage } from '../../../common/Utils';
 
 const ContactInfo = () => {
     const [enableEdit,setEnableEdit] = useState(false) ;
@@ -17,7 +17,7 @@ const ContactInfo = () => {
         event.preventDefault()
         event.target.reset()
         setEnableEdit(false)
-        toast("Updated Successful",{position:'bottom-right'})
+        showMessage("Updated Successful",'SUCCESS')
     }
 
     const onClickEdit = () => {

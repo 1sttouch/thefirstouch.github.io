@@ -1,10 +1,30 @@
-import React from 'react';
-import CourseData from '../jsonData/CourseData.json'
+import React, { useEffect, useState } from 'react';
 import SingleCourse from './SingleCourse';
 import Carousel from 'react-multi-carousel';
+import useFetch from '../hook/useFetch';
+import { API } from '../common/Constants';
+import { getAPIHeaders } from '../common/Utils';
 
 const CoursesH2 = (props) => {
     const { courseV2 } = props
+
+    const {isLoading, error, data, status, callFetch } = useFetch();
+    const [courses, setCourses] = useState<any>([]);
+
+    useEffect(() => {
+        callFetch(API.SEARCH_LEARNINGS,
+            'GET',
+            getAPIHeaders(),
+            null,
+            null
+        );
+    }, []);
+
+    useEffect(() => {
+        if(data){
+            setCourses(data)
+        }
+    }, [data]);
 
     const CustomRightArrow = ({ onClick }) => {
         return <button className='commonArrow arrowRight' onClick={() => onClick()}><i className="fa-solid fa-chevron-right"></i></button>;
@@ -39,8 +59,8 @@ const CoursesH2 = (props) => {
                                         swipeable={true}
                                         autoPlay={false}
                                         autoPlaySpeed={3000}
-                                        customRightArrow={<CustomRightArrow />}
-                                        customLeftArrow={<CustomLeftArrow />}
+                                        customRightArrow={<CustomRightArrow onClick={undefined} />}
+                                        customLeftArrow={<CustomLeftArrow onClick={undefined} />}
                                         responsive={{
                                             laptop: {
                                                 breakpoint: {
@@ -68,8 +88,8 @@ const CoursesH2 = (props) => {
                                             }
                                         }}>
 
-                                        {CourseData.map(course =>
-                                            <SingleCourse key={course.id} course={course} />
+                                        {courses.map(course =>
+                                            <SingleCourse key={course._id} course={course} />
                                         )}
 
                                     </Carousel>

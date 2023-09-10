@@ -1,12 +1,13 @@
 import React from 'react';
-import { toast } from 'react-toastify';
+import { showMessage } from '../../../common/Utils';
+
 
 const ChangePassword = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault()
         event.target.reset()
-        toast("Login Successful",{position:'bottom-right'})
+        showMessage("Password Updated Successfully",'SUCCESS')
     }
 
     return (

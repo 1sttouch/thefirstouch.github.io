@@ -1,10 +1,10 @@
 import React from 'react';
-import HomeEvent from './HomeEvent';
-import videoThumb from '/img/about/video_thumb.jpg'
 import { Fade } from 'react-reveal';
 import { HashLink as Link } from 'react-router-hash-link';
+import HomeEvent from './HomeEvent';
 
 const Event = () => {
+
     return (
         <>
             <section className="event-sec pt-100 pb-70">
@@ -17,7 +17,7 @@ const Event = () => {
                         </div>
                         <div className="col-lg-6 col-md-12">
                             <div className="video-inner">
-                                <img src={videoThumb} alt="VideoThumb" />
+                                <img src={'/img/about/video_thumb.jpg'} alt="VideoThumb" />
                                 <div className="video-overly">
                                     <div className="video-button">
                                         <a href="https://www.youtube.com/watch?v=YzDz8g1z83U" className="mfp-iframe video-play"></a>

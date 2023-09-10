@@ -4,7 +4,6 @@ import InstructorData from "../jsonData/InstructorData.json"
 import RegistrationForm from './RegistrationForm';
 import SingleAddedStudent from './SingleAddedStudent';
 import Carousel from 'react-multi-carousel';
-import { Backdrop, CircularProgress } from '@mui/material';
 import Spinner from './Spinner';
 import { useNavigate } from 'react-router-dom';
 

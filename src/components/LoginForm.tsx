@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { toast } from 'react-toastify';
 import useFetch from '../hook/useFetch';
 import { API }  from '../common/Constants'
+import { showMessage } from '../common/Utils';
 
 interface Props {
     setProgress: (porgress: boolean)=>{}
@@ -28,7 +28,7 @@ const LoginForm = ({setProgress, onSuccess}) => {
 
     useEffect(() => {
         if(error){
-            toast(error.response.data,{position:'bottom-right'})
+            showMessage(error.response.data,'ERROR')
         }
     }, [error]);
 

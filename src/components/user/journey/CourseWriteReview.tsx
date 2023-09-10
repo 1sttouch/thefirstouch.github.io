@@ -1,10 +1,11 @@
 import React from 'react';
-import { toast } from 'react-toastify';
+import { showMessage } from '../../../common/Utils';
+
 
 const handleSend = (event) => {
     event.preventDefault()
     event.target.reset()
-    toast.success("Review Post Successfully")
+    showMessage("Review Post Successfully",'SUCCESS')
 }
 
 const CourseWriteReview = () => {

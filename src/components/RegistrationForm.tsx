@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { toast } from 'react-toastify';
 import useFetch from '../hook/useFetch';
 import DatePicker from './DatePicker';
 import { API } from '../common/Constants';
+import { showMessage } from '../common/Utils';
 
 interface Props {
     setProgress: (porgress: boolean)=>{}
@@ -13,13 +13,13 @@ interface Props {
 const RegistrationForm = ({setProgress, onSuccess}) => {
     const {isLoading, error, data, status, callFetch } = useFetch(); 
 
-    const[firstName, setFirstName] = useState<string | undefined>(undefined);
-    const[lastName, setLastName] = useState<string | undefined>(undefined);
-    const[username, setUserName] = useState<string | undefined>(undefined);
-    const[password, setPassword] = useState<string | undefined>(undefined);
-    const[confirmPassword, setConfirmPassword] = useState<string | undefined>(undefined);
-    const[email, setEmail] = useState<string | undefined>(undefined);
-    const[phoneNumber, setPhoneNumber] = useState<number | undefined>(undefined);
+    const[firstName, setFirstName] = useState<string>();
+    const[lastName, setLastName] = useState<string>();
+    const[username, setUserName] = useState<string>();
+    const[password, setPassword] = useState<string>();
+    const[confirmPassword, setConfirmPassword] = useState<string>();
+    const[email, setEmail] = useState<string>();
+    const[phoneNumber, setPhoneNumber] = useState<string>();
 
     useEffect(() => {
         setProgress(isLoading)
@@ -34,7 +34,7 @@ const RegistrationForm = ({setProgress, onSuccess}) => {
 
     useEffect(() => {
         if(error){
-            toast(error.response.data,{position:'bottom-right'})
+            showMessage(error?.response?.data,'ERROR')
         }
     }, [error]);
 
@@ -47,13 +47,13 @@ const RegistrationForm = ({setProgress, onSuccess}) => {
     }
 
     const reset = () => {
-        setFirstName(undefined)
-        setLastName(undefined)
-        setUserName(undefined)
-        setPassword(undefined)
-        setConfirmPassword(undefined)
-        setEmail(undefined)
-        setPhoneNumber(undefined)
+        setFirstName('')
+        setLastName('')
+        setUserName('')
+        setPassword('')
+        setConfirmPassword('')
+        setEmail('')
+        setPhoneNumber('')
     }
 
     const handleSubmit = (event) => {
@@ -70,11 +70,11 @@ const RegistrationForm = ({setProgress, onSuccess}) => {
                     username: username,
                     password: password,
                     email: email,
-                    phoneNumber: phoneNumber
+                    phoneNumber: Number(phoneNumber)
                 }
             );
         } else {
-            toast("Password mismatch",{position:'bottom-right'})
+            showMessage("Password mismatch",'ERROR')
         }
 
     }
@@ -104,7 +104,7 @@ const RegistrationForm = ({setProgress, onSuccess}) => {
                         </div>
                         <div className="single-input-field">
                             <input type="number" name='phone' autoComplete='off' placeholder="Phone Number" required 
-                            onChange={(e)=>setPhoneNumber(Number(e.target.value))} value={phoneNumber}/>
+                            onChange={(e)=>setPhoneNumber(e.target.value)} value={phoneNumber}/>
                         </div>
                         <div className="single-input-field">
                             <input type="text" name='user-name' autoComplete='off' placeholder="Username *" required 

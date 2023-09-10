@@ -8,8 +8,8 @@ interface FetchCall {
   error: any
   callFetch: (endpoint: string,
        method: 'POST' | 'GET' | 'DELETE' | 'PUT', 
-       query:any, 
        headers:any, 
+       query:any, 
        body:any) => void
 }
 
@@ -22,7 +22,7 @@ const useFetch = ():FetchCall => {
 
 
 
-    const fetchData = async (endpoint, method, query, headers, body) => {
+    const fetchData = async (endpoint, method, headers, query, body) => {
         setIsLoading(true)
         const options = {
           method: method ? method : 'GET',
@@ -50,9 +50,12 @@ const useFetch = ():FetchCall => {
         }
       };
 
-    const callFetch = (endpoint, method, query, headers, body) => {
+    const callFetch = (endpoint, method, headers, query, body) => {
+        setData(null)
+        setStatus(null)
+        setError(null)
         setIsLoading(true)
-        fetchData(endpoint, method, query, headers, body);
+        fetchData(endpoint, method, headers, query, body);
     }
 
     return { data, status, isLoading, error, callFetch };
