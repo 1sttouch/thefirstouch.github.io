@@ -1,16 +1,24 @@
-import { ToastOptions, toast } from "react-toastify";
+import { ToastOptions, ToastPosition, toast } from "react-toastify";
 
 
 const monthNames = ["January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"
 ];
 
+const getFromLocalStorage = (item: string): string | null => {
+    return localStorage.getItem(item)
+}
+
+const setInLocalStorage = (key: string, value: string) => {
+    localStorage.setItem(key,value)
+}
+
 export const getAuthToken = (): string | null => {
    return getFromLocalStorage('token')
 }
 
-export const getFromLocalStorage = (item: string): string | null => {
-    return localStorage.getItem(item)
+export const setAuthToken = (token: string) => {
+    setInLocalStorage('token',token)
 }
 
 export const getAPIHeaders = () => {
@@ -47,7 +55,7 @@ export const showMessage = (message: string , type: 'SUCCESS' | 'INFO' | 'ERROR'
     let props: ToastOptions = {
         closeOnClick: true,
         pauseOnHover: false,
-        position:'bottom-right',
+        position: 'bottom-center',
         draggable: true,
         theme: "light",
         autoClose: 5000,

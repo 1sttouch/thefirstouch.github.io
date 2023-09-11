@@ -1,6 +1,8 @@
 
 
 const API = {
+    PROFILE: 'user/profile',
+    CHANGE_PASSWORD: 'user/password',
     LOGIN: "login/app",
     SIGN_UP: "signup",
     GET_EVENTS: "event",

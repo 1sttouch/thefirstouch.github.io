@@ -6,6 +6,7 @@ import SingleAddedStudent from './SingleAddedStudent';
 import Carousel from 'react-multi-carousel';
 import Spinner from './Spinner';
 import { useNavigate } from 'react-router-dom';
+import { setAuthToken } from '../common/Utils';
 
 const JoinUs = () => {
 
@@ -22,7 +23,7 @@ const JoinUs = () => {
     };
 
     const onSuccess = (data) => {
-        localStorage.setItem('token',data?.token)
+        setAuthToken(data?.token)
         navigate('/user-home');
     };
 

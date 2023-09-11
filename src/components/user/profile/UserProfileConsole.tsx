@@ -37,7 +37,7 @@ const UserProfileConsole = () => {
 
                                 {/* --- Change Password --- */}
                                 <div id="change-pwd-tab-pane" tabIndex={0} className="tab-pane fade" role="tabpanel" aria-labelledby="change-pwd-tab">
-                                    <ChangePassword />
+                                    <ChangePassword/>
                                 </div>
 
                                 {/* --- Request Callback --- */}

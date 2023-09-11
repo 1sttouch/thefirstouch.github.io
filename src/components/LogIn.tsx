@@ -6,6 +6,7 @@ import SingleAddedStudent from './SingleAddedStudent';
 import Carousel from 'react-multi-carousel';
 import { useNavigate } from 'react-router-dom';
 import Spinner from './Spinner';
+import { setAuthToken } from '../common/Utils';
 
 const LogIn = () => {
     const [inProgress, setProgress] = useState<boolean>(false);
@@ -21,7 +22,7 @@ const LogIn = () => {
     };
 
     const onSuccess = (data) => {
-        localStorage.setItem('token',data?.token)
+        setAuthToken(data?.token)
         navigate('/user-home');
     };
 
