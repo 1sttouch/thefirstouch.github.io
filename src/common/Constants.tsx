@@ -7,7 +7,10 @@ const API = {
     SIGN_UP: "signup",
     GET_EVENTS: "event",
     SEARCH_LEARNINGS: 'learning/search',
-    QUERY: "query"
+    QUERY: "query",
+    CALLBACK: 'callback',
+    CART: 'cart',
+    CHECKOUT: 'cart/checkout',
 }
 
 export {API};

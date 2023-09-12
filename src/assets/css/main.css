@@ -540,6 +540,8 @@ input[type=number] {
 
 .hd-sec {
 	background: #fff;
+	z-index: 9999999999;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
 }
 
 .hd-sec.sticky-menu {
@@ -3284,6 +3286,15 @@ h1.join-us-form-title {
 }
 
 .get-course-btn a {
+	padding: 8px 32px;
+	display: inline-block;
+	background: #f1c40f;
+	color: #011e40;
+	text-transform: capitalize;
+	font-weight: bold;
+}
+
+.get-course-btn button {
 	padding: 8px 32px;
 	display: inline-block;
 	background: #f1c40f;

@@ -1,9 +1,13 @@
 import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
-import { durationInHoursMins } from '../common/Utils';
+import { durationInHoursMins, showMessage } from '../common/Utils';
 
 const SingleCourse = ({ course }) => {
     let { image, ratting, amount, title, description, duration } = course
+
+    const handleSave = () => {
+        showMessage('Item saved','INFO');
+    }
 
     return (
         <>
@@ -31,7 +35,8 @@ const SingleCourse = ({ course }) => {
                 <div className="course-info">
                     <ul>
                         <li><Link to="#"><i className="fa-regular fa-clock"></i>{durationInHoursMins(duration)}</Link></li>
-                        <li><Link to="#"><i className="fa fa-heart"></i>{"save"}</Link></li>
+                        {/* <li><Link onClick={handleSave}><i className="fa fa-heart"></i>{"save"}</Link></li> */}
+                        <li><Link onClick={undefined}><i className="fa fa-shopping-cart"></i>{"Add to Cart"}</Link></li>
                     </ul>
                 </div>
             </div>
