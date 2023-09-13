@@ -12,7 +12,7 @@ const HomeEvent = () => {
     useEffect(() => {
         callFetch(API.GET_EVENTS,
             'GET',
-            getAPIHeaders(),
+            null,
             {
                 'endTime': 1726960302,
                 'startTime':1693632594

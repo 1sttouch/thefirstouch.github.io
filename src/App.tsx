@@ -32,7 +32,7 @@ import SignUp from './pages/SignUp';
 import UserHome from './pages/UserHome';
 import UserProfile from './pages/UserProfile';
 import UserTouchPoints from './pages/UserTouchPoints';
-import Cart from './components/purchase/Cart';
+import OrderConsole from './components/purchase/OrderConsole';
 
 // Components 
 
@@ -75,7 +75,7 @@ function App() {
             <Route path='/signup' element={<SignUp />}> </Route>
             <Route path='/signin' element={<SignIn />}> </Route>
 
-            <Route path='/cart' element={<Cart />}> </Route>
+            <Route path='/purchase' element={<OrderConsole />}> </Route>
 
 
             <Route path='/user-home' element={<UserHome />}> </Route>

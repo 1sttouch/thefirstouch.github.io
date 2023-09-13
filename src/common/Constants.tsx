@@ -11,6 +11,8 @@ const API = {
     CALLBACK: 'callback',
     CART: 'cart',
     CHECKOUT: 'cart/checkout',
+    ORDER: 'order',
+    CONFIRM_ORDER: 'order/confirm'
 }
 
 export {API};

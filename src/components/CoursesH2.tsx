@@ -14,7 +14,7 @@ const CoursesH2 = (props) => {
     useEffect(() => {
         callFetch(API.SEARCH_LEARNINGS,
             'GET',
-            getAPIHeaders(),
+            null,
             null,
             null
         );

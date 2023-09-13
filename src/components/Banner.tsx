@@ -26,8 +26,8 @@ const Banner = () => {
                     showDots={false}
                     swipeable={true}
                     autoPlay={true}
-                    customRightArrow={<CustomRightArrow />}
-                    customLeftArrow={<CustomLeftArrow />}
+                    customRightArrow={<CustomRightArrow onClick={undefined} />}
+                    customLeftArrow={<CustomLeftArrow onClick={undefined} />}
                     autoPlaySpeed={3000}
                     responsive={{
                         desktop: {

@@ -1,110 +1,40 @@
-import React, { useEffect, useState } from 'react';
-import useFetch from '../../hook/useFetch';
-import { API } from '../../common/Constants';
-import { getAPIHeaders, showMessage } from '../../common/Utils';
+import React from 'react';
+import { Fade } from 'react-reveal';
+import OrderView from './OrderView';
+import PlaceOrderForm from './PlaceOrderForm';
 
 interface Props {
-    setProgress: (porgress: boolean)=>{}
-    onSuccess: (data: any)=>{}
+    order: any
+    setProgress: (inProgress:boolean) =>void
+    setActiveStep: (step: number) => void
 }
 
+const PlaceOrder = ({order,setProgress, setActiveStep}:Props) => {
 
-const PlaceOrder = ({setProgress, onSuccess}) => {
-    const {isLoading, error, data, status, callFetch } = useFetch(); 
-
-    const[addressLine1, setAddressLine1] = useState<string>();
-    const[addressLine2, setAddressLine2] = useState<string>();
-    const[city, setCity] = useState<string>();
-    const[state, setState] = useState<string>();
-    const[country, setCountry] = useState<string>("India");
-    const[pin, setPin] = useState<string>();
-
-    useEffect(() => {
-        setProgress(isLoading)
-    }, [isLoading]);
-    
-    useEffect(() => {
-        if(data && status && status < 299){
-            reset();
-            onSuccess(data);
-        }
-    }, [data]);
-
-    useEffect(() => {
-        if(error){
-            showMessage(error?.response?.data,'ERROR')
-        }
-    }, [error]);
-
-    const reset = () => {
-        setAddressLine1('')
-        setAddressLine2('')
-        setCity('')
-        setState('')
-        setCountry('')
-        setPin('')
+    const onSuccess = () => {
+        setActiveStep(2);
     }
-
-    const handleSubmit = (event) => {
-        event.preventDefault()
-        event.target.reset()
-      
-            callFetch(API.CHECKOUT,
-                'POST',
-                getAPIHeaders(),
-                null,
-                {
-                    addressLine1: addressLine1,
-                    addressLine2: addressLine2,
-                    city: city,
-                    state: state,
-                    country: country,
-                    pin: pin
-                }
-            );
-   
-
-    }
-
 
     return (
         <>
-                            
-            <div className="join-us-form position-relative">
-                <h1 className="join-us-form-title">Share Billing Details</h1>
-                <form onSubmit={handleSubmit}>
-                    <div className="join-us-field">
-                        <div className="single-input-field">
-                            <input type="text" name='address-line-1' autoComplete='off' placeholder="Address Line 2 *" required 
-                            onChange={(e)=>setAddressLine1(e.target.value)} value={addressLine1}/>
+      
+            <section className="event-sec pt-100 pb-70">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-6 col-md-12">
+                            <Fade left>
+                                <OrderView order={order} />
+                            </Fade>
                         </div>
-                        <div className="single-input-field">
-                            <input type="text" name='address-line-2' autoComplete='off' placeholder="Address Line 2 *" required 
-                            onChange={(e)=>setAddressLine2(e.target.value)} value={addressLine2}/>
+                        <div className="col-lg-6 col-md-12">
+                            <Fade right>
+                                    <PlaceOrderForm onSuccess={onSuccess} setProgress={setProgress} order={order}/>
+                            </Fade>
                         </div>
-                        <div className="single-input-field">
-                            <input type="text" name='city' autoComplete='off' placeholder="City *" required={true}
-                            onChange={(e)=>setCity(e.target.value)} value={city} />
-                        </div>
-                        <div className="single-input-field">
-                            <input type="text" name='state' autoComplete='off' placeholder="State *" required={true}
-                            onChange={(e)=>setState(e.target.value)} value={state} />
-                        </div>
-                        <div className="single-input-field">
-                            <input disabled type="text" name='country' autoComplete='off' placeholder="Country *" required 
-                            onChange={(e)=>setCountry(e.target.value)} value={country}/>
-                        </div>  
-                        <div className="single-input-field">
-                            <input type="number" name='pin' autoComplete='off' placeholder="PIN *" required 
-                            onChange={(e)=>setPin(e.target.value)} value={pin}/>
-                        </div>           
-                        <button className='register-btn' type="submit" name='submit'>
-                            Place Order 
-                        </button>
                     </div>
-                </form>
-
-            </div>
+                </div>
+            </section>
+        
         </>
     );
 };

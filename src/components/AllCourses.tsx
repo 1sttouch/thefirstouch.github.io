@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import CourseData from '../jsonData/CourseData.json'
 import SingleCourse from './SingleCourse';
 import useFetch from '../hook/useFetch';
-import { getAPIHeaders } from '../common/Utils';
+import { getAPIHeaders, showMessage } from '../common/Utils';
 import { API } from '../common/Constants';
 import Spinner from './Spinner';
 
@@ -13,7 +13,7 @@ const AllCourses = () => {
     useEffect(() => {
         callFetch(API.SEARCH_LEARNINGS,
             'GET',
-            getAPIHeaders(),
+            null,
             null,
             null
         );
@@ -32,8 +32,8 @@ const AllCourses = () => {
                 <div className="container">
                     <div className="row">
                         {courses.map(course =>
-                            <div className="col-lg-4 col-md-6 col-12" key={course.id}>
-                                <SingleCourse course={course} />
+                            <div className="col-lg-4 col-md-6 col-12" key={course._id}>
+                                <SingleCourse course={course}/>
                             </div>
                         )}
                     </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import { getDayMonthTime } from '../../common/Utils';
 
-const CartItem = ({ item }) => {
+const PurchaseItem = ({ item }) => {
     let { image, title, description, amount } = item
 
     return (
@@ -26,4 +26,4 @@ const CartItem = ({ item }) => {
     );
 };
 
-export default CartItem;
+export default PurchaseItem;

@@ -1,15 +1,20 @@
 import React, { useEffect, useState } from 'react';
+import EventData from '../../jsonData/EventData.json'
+import SingleEvent from '../SingleEvent';
 import useFetch from '../../hook/useFetch';
 import { API } from '../../common/Constants';
 import { getAPIHeaders } from '../../common/Utils';
 import PurchaseItem from './PurchaseItem';
 
-const CartView = () => {
+interface Props {
+    order: any
+}
+const OrderView = ({order}:Props) => {
     const {isLoading, error, data, status, callFetch } = useFetch();
     const [purcahseItems, setPurcahseItems] = useState<any>([]);
 
     useEffect(() => {
-            callFetch(API.CART,
+            callFetch(API.ORDER + "/" + order?._id,
             'GET',
             getAPIHeaders(),
             null,
@@ -24,7 +29,7 @@ const CartView = () => {
     }, [data]);
     return (
         <>
-            <h1 className="faq-style1-title">Your Purchase Selection</h1>
+            <h1 className="faq-style1-title">Your Order Items</h1>
             {purcahseItems.map(item =>
                 <PurchaseItem item={item} key={item._id} />
             )}
@@ -32,4 +37,4 @@ const CartView = () => {
     );
 };
 
-export default CartView;
+export default OrderView;
