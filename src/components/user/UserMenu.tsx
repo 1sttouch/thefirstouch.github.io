@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
-import logo from '/img/logo/logo.png'
+import logo from '/img/comment/commenter_1.jpg'
 import UserMenuItems from './UserMenuItems';
-import UserOffCanvasMenu from './user/UserOffCanvasMenu';
+import UserOffCanvasMenu from './UserOffCanvasMenu';
 
 const UserMenu = (props) => {
 

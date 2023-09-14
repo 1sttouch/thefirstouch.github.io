@@ -175,6 +175,10 @@ input[type=number] {
 	appearance: textfield;
 }
 
+.pt-20 {
+	padding-top: 20px
+}
+
 .pt-100 {
 	padding-top: 100px
 }
@@ -4439,6 +4443,23 @@ h1.faq-style1-title::before {
 	width: 100%;
 	content: "";
 	padding: 100px 0;
+}
+
+.flex-div-center {
+	display: flex;
+	justify-content: center;
+}
+
+.home-v2.blog-sec .slider-box {
+	left: 0;
+	position: relative;
+	right: 0;
+	top: 0;
+	width: 90%;
+	content: "";
+	padding: 20px 0;
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
+
 }
 
 .home-v3.blog-sec h1,

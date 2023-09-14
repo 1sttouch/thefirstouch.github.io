@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import CarouselSlider from '../../../components/CarouselSlider';
-import EventData from '../../../jsonData/EventData.json';
-import SingleEvent from '../../SingleEvent';
-import { getAPIHeaders, showMessage } from '../../../common/Utils';
-import { API } from '../../../common/Constants';
-import useFetch from '../../../hook/useFetch';
-import Spinner from '../../Spinner';
+import CarouselSlider from './CarouselSlider';
+import { showMessage } from '../common/Utils';
+import { API } from '../common/Constants';
+import useFetch from '../hook/useFetch';
+import Spinner from './Spinner';
+import PurchaseItemCard from './PurchaseItemCard';
 
-const UserEvents = () => {
+const EventsSlider = () => {
     const [children, setChildren] = useState<React.JSX.Element[]>([]);
 
     const {isLoading, error, data, status, callFetch } = useFetch();
@@ -18,7 +17,7 @@ const UserEvents = () => {
         if(events){
             let items :React.JSX.Element[] =[]
             events.map(event =>
-                items.push(<SingleEvent event={event} />)
+                items.push(<PurchaseItemCard purchaseItem={event} showActionBar showAddToCart/>)
             )
             setChildren(items)
         }
@@ -34,7 +33,7 @@ const UserEvents = () => {
     useEffect(() => {
         callFetch(API.GET_EVENTS,
             'GET',
-            getAPIHeaders(),
+            null,
             {
                 'endTime': 1726960302,
                 'startTime':1693632594
@@ -53,9 +52,9 @@ const UserEvents = () => {
     return (
         <>
             <Spinner show={isLoading} />
-            <CarouselSlider children={children} heading={"Your Events"}/>
+            { data?.length ? <CarouselSlider children={children} heading={"Checkout Our Other Events"}/> : <></> }
         </>
     );
 };
 
-export default UserEvents;
+export default EventsSlider;

@@ -124,6 +124,10 @@
 		font-size: 16px;
 	}
 
+	.pt-20 {
+		padding-top: 10px;
+	}
+
 	.pt-100 {
 		padding-top: 80px;
 	}

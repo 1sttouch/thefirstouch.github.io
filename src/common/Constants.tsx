@@ -12,7 +12,8 @@ const API = {
     CART: 'cart',
     CHECKOUT: 'cart/checkout',
     ORDER: 'order',
-    CONFIRM_ORDER: 'order/confirm'
+    CONFIRM_ORDER: 'order/confirm',
+    PURCHASE: 'purchase'
 }
 
 export {API};

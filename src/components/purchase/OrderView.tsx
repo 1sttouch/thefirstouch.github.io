@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import EventData from '../../jsonData/EventData.json'
-import SingleEvent from '../SingleEvent';
 import useFetch from '../../hook/useFetch';
 import { API } from '../../common/Constants';
 import { getAPIHeaders } from '../../common/Utils';
-import PurchaseItem from './PurchaseItem';
+import PurchaseItemCard from '../PurchaseItemCard';
 
 interface Props {
     order: any
@@ -31,7 +29,7 @@ const OrderView = ({order}:Props) => {
         <>
             <h1 className="faq-style1-title">Your Order Items</h1>
             {purcahseItems.map(item =>
-                <PurchaseItem item={item} key={item._id} />
+                <PurchaseItemCard purchaseItem={item} key={item._id} />
             )}
         </>
     );

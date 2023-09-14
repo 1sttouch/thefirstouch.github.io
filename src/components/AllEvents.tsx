@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import EventData from '../jsonData/EventData.json'
-import SingleEvent from './SingleEvent';
-import Pagination from './Pagination';
 import useFetch from '../hook/useFetch';
 import { API } from '../common/Constants';
-import { getAPIHeaders } from '../common/Utils'
 import Spinner from './Spinner';
+import PurchaseItemCard from './PurchaseItemCard';
 
 const AllEvents = () => {
     const {isLoading, error, data, status, callFetch } = useFetch();
@@ -37,7 +34,8 @@ const AllEvents = () => {
                     <div className="row">
                         {events.map(event =>
                             <div className="col-xl-6 col-lg-12" key={event.id}>
-                                <SingleEvent event={event} />
+                                {/* <SingleEvent event={event} /> */}
+                                <PurchaseItemCard purchaseItem={event} showActionBar showAddToCart/>
                             </div>
                         )}
                         {/* <Pagination /> */}

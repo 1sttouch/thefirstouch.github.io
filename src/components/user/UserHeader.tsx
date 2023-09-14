@@ -1,6 +1,6 @@
 import React from 'react';
 import UserMenu from './UserMenu';
-import HeaderTop from './HeaderTop';
+import HeaderTop from '../HeaderTop';
 
 const UserHeader = () => {
     return (

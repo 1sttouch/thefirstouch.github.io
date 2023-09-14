@@ -29,8 +29,8 @@ import Faq from './pages/Faq';
 import Home2 from './pages/Home2';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
-import UserHome from './pages/UserHome';
-import UserProfile from './pages/UserProfile';
+import UserHome from './components/user/home/UserHome';
+import UserProfile from './components/user/profile/UserProfile';
 import UserTouchPoints from './pages/UserTouchPoints';
 import OrderConsole from './components/purchase/OrderConsole';
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Footer from '../Footer';
-import UserHeader from '../UserHeader';
+import UserHeader from '../user/UserHeader';
 import Cart from './Cart';
 import Spinner from '../Spinner';
 import PlaceOrder from './PlaceOrder';

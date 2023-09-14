@@ -59,7 +59,7 @@ const AddToCartButton = ({itemId, itemType}:Props) => {
     return (
         <>
            <Spinner show={isLoading} />
-           <Link onClick={handleSubmit}><i className="fa fa-shopping-cart"></i>{"Add to Cart"}</Link>
+           <Link onClick={handleSubmit}><i className="fa fa-shopping-cart" style={{ color: "#f1c40f", marginRight:"6px"}}></i>{"Add to Cart"}</Link>
         </>
 
     );

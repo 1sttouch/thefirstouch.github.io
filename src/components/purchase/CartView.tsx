@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import useFetch from '../../hook/useFetch';
 import { API } from '../../common/Constants';
 import { getAPIHeaders } from '../../common/Utils';
-import PurchaseItem from './PurchaseItem';
+import PurchaseItemCard from '../PurchaseItemCard';
 
 const CartView = () => {
     const {isLoading, error, data, status, callFetch } = useFetch();
@@ -26,7 +26,7 @@ const CartView = () => {
         <>
             <h1 className="faq-style1-title">Your Purchase Selection</h1>
             {purcahseItems.map(item =>
-                <PurchaseItem item={item} key={item._id} />
+                <PurchaseItemCard purchaseItem={item} key={item._id} />
             )}
         </>
     );

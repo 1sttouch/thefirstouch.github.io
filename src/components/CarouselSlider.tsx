@@ -6,7 +6,7 @@ interface Props {
     children: React.JSX.Element[]
 }
 
-const CarouselSlider = ({heading, children}) => {
+const CarouselSlider = ({heading, children}: Props) => {
 
     const CustomRightArrow = ({ onClick }) => {
         return <button className='commonArrow arrowRight' onClick={() => onClick()}><i className="fa-solid fa-chevron-right"></i></button>;
@@ -19,8 +19,8 @@ const CarouselSlider = ({heading, children}) => {
 
     return (
         <>
-            <section className={`home-v2 blog-sec pt-100 pb-70`}>
-                <div className="blog-sec-overlay overflow-hidden">
+            <section className={`home-v2 blog-sec pt-20 pb-70 flex-div-center`} >
+                <div className="slider-box overflow-hidden">
                     <div className="container">
                         <div className="row">
                             <div className="col-md-12">
