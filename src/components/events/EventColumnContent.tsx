@@ -1,7 +1,7 @@
 import React from 'react';
-import EventData from '../jsonData/EventData.json'
+import EventData from '../../jsonData/EventData.json'
 import SingleEvent from './SingleEvent';
-import Pagination from './Pagination';
+import Pagination from '../Pagination';
 
 const EventColumnContent = () => {
     return (

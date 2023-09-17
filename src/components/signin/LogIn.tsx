@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Fade } from 'react-reveal';
-import InstructorData from "../jsonData/InstructorData.json"
+import InstructorData from "../../jsonData/InstructorData.json"
 import LoginForm from './LoginForm';
-import SingleAddedStudent from './SingleAddedStudent';
+import SingleAddedStudent from '../SingleAddedStudent';
 import Carousel from 'react-multi-carousel';
 import { useNavigate } from 'react-router-dom';
-import Spinner from './Spinner';
-import { setAuthToken } from '../common/Utils';
+import Spinner from '../common/Spinner';
+import { setAuthToken } from '../../common/Utils';
 
 const LogIn = () => {
     const [inProgress, setProgress] = useState<boolean>(false);

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import BreadCrumb from '../../BreadCrumb';
+import BreadCrumb from '../../common/BreadCrumb';
 import Journies from './Journeies';
 
 const UserJourneyConsole = () => {

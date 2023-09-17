@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import useFetch from '../hook/useFetch';
-import DatePicker from './DatePicker';
-import { API } from '../common/Constants';
-import { showMessage } from '../common/Utils';
+import useFetch from '../../hook/useFetch';
+import DatePicker from '../common/DatePicker';
+import { API } from '../../common/Constants';
+import { showMessage } from '../../common/Utils';
+import { useAuth } from '../../hook/authContext';
 
 interface Props {
     setProgress: (porgress: boolean)=>{}
@@ -11,6 +12,7 @@ interface Props {
 
 
 const RegistrationForm = ({setProgress, onSuccess}) => {
+    const {authUser, setAuthUser, setIsLoggedIn, isLoggedIn} = useAuth()
     const {isLoading, error, data, status, callFetch } = useFetch(); 
 
     const[firstName, setFirstName] = useState<string>();
@@ -27,6 +29,8 @@ const RegistrationForm = ({setProgress, onSuccess}) => {
     
     useEffect(() => {
         if(data && status && status < 299){
+            setAuthUser(username);
+            setIsLoggedIn(true);
             reset();
             onSuccess(data);
         }

@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import CourseData from '../jsonData/CourseData.json'
+import CourseData from '../../jsonData/CourseData.json'
 import SingleCourse from './SingleCourse';
-import useFetch from '../hook/useFetch';
-import { getAPIHeaders, showMessage } from '../common/Utils';
-import { API } from '../common/Constants';
-import Spinner from './Spinner';
-import CarouselSlider from './CarouselSlider';
-import PurchaseItemCard from './PurchaseItemCard';
+import useFetch from '../../hook/useFetch';
+import { getAPIHeaders, showMessage } from '../../common/Utils';
+import { API } from '../../common/Constants';
+import Spinner from '../common/Spinner';
+import CarouselSlider from '../common/CarouselSlider';
+import PurchaseItemCard from '../PurchaseItemCard';
 
 const LearningsSlider = () => {
     const {isLoading, error, data, status, callFetch } = useFetch();

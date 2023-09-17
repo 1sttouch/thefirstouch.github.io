@@ -13,9 +13,17 @@ const setInLocalStorage = (key: string, value: string) => {
     localStorage.setItem(key,value)
 }
 
+const removeFromLocalStorate = (key: string) => {
+    localStorage.removeItem(key)
+}
+
 export const getAuthToken = (): string | null => {
    return getFromLocalStorage('token')
 }
+
+export const removeAuthToken = () => {
+    removeFromLocalStorate('token')
+ }
 
 export const setAuthToken = (token: string) => {
     setInLocalStorage('token',token)

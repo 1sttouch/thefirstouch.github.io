@@ -2,7 +2,7 @@ import React from 'react';
 import ContactInfo from './ContactInfo';
 import ChangePassword from './ChangePassword';
 import RequestCallBack from './RequestCallBack';
-import BreadCrumb from '../../BreadCrumb';
+import BreadCrumb from '../../common/BreadCrumb';
 
 
 const UserProfileConsole = () => {

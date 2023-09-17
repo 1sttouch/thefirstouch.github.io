@@ -1,5 +1,5 @@
 import React from 'react';
-import OurFaqData from '../jsonData/OurFaqData.json'
+import OurFaqData from '../../jsonData/OurFaqData.json'
 import SingleFaq from './SingleFaq';
 import FaqInfo from './FaqInfo';
 

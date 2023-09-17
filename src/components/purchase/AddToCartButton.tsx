@@ -3,7 +3,7 @@ import { HashLink as Link } from 'react-router-hash-link';
 import useFetch from '../../hook/useFetch';
 import { API } from '../../common/Constants';
 import { getAPIHeaders, showMessage } from '../../common/Utils';
-import Spinner from '../Spinner';
+import Spinner from '../common/Spinner';
 
 interface Props {
     itemId: string

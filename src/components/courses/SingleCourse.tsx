@@ -1,7 +1,7 @@
 import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
-import { durationInHoursMins, showMessage } from '../common/Utils';
-import AddToCartButton from './purchase/AddToCartButton';
+import { durationInHoursMins, showMessage } from '../../common/Utils';
+import AddToCartButton from '../purchase/AddToCartButton';
 
 interface Props {
     course : any

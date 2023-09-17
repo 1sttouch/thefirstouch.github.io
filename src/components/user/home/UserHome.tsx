@@ -1,18 +1,17 @@
 import React from 'react';
-import UserHeader from '../UserHeader';
-import Footer from '../../Footer';
-import CarouselSlider from '../../CarouselSlider';
+import Footer from '../../common/Footer';
 import UserEvents from './UserEventsSlider';
 import UserLearnings from './UserLearningsSlider';
-import EventsSlider from '../../EventsSlider';
-import LearningsSlider from '../../LearningSlider';
-import BreadCrumb from '../../BreadCrumb';
+import EventsSlider from '../../events/EventsSlider';
+import LearningsSlider from '../../courses/LearningSlider';
+import BreadCrumb from '../../common/BreadCrumb';
+import Header5 from '../../common/Header5';
 
 
 const UserHome = () => {
     return (
         <>
-            <UserHeader />
+            <Header5 />
             <BreadCrumb pageTitle="My View" />
             <UserEvents/>
             <UserLearnings/>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
-import { getDayMonthTime } from '../common/Utils';
+import { getDayMonthTime } from '../../common/Utils';
 
 const SingleEvent = ({ event }) => {
     let { image, title, location, time, description, startTime, endTime } = event

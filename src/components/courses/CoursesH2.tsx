@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import SingleCourse from './SingleCourse';
 import Carousel from 'react-multi-carousel';
-import useFetch from '../hook/useFetch';
-import { API } from '../common/Constants';
-import { getAPIHeaders } from '../common/Utils';
+import useFetch from '../../hook/useFetch';
+import { API } from '../../common/Constants';
+import { getAPIHeaders } from '../../common/Utils';
 
 const CoursesH2 = (props) => {
     const { courseV2 } = props

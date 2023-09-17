@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Fade } from 'react-reveal';
-import InstructorData from "../jsonData/InstructorData.json"
+import InstructorData from "../../jsonData/InstructorData.json"
 import RegistrationForm from './RegistrationForm';
-import SingleAddedStudent from './SingleAddedStudent';
+import SingleAddedStudent from '../SingleAddedStudent';
 import Carousel from 'react-multi-carousel';
-import Spinner from './Spinner';
+import Spinner from '../common/Spinner';
 import { useNavigate } from 'react-router-dom';
-import { setAuthToken } from '../common/Utils';
+import { setAuthToken } from '../../common/Utils';
 
 const JoinUs = () => {
 

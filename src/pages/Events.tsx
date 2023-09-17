@@ -1,8 +1,8 @@
 import React from 'react';
-import Header5 from '../components/Header5';
-import BreadCrumb from '../components/BreadCrumb';
-import AllEvents from '../components/AllEvents';
-import Footer from '../components/Footer';
+import Header5 from '../components/common/Header5';
+import BreadCrumb from '../components/common/BreadCrumb';
+import AllEvents from '../components/events/AllEvents';
+import Footer from '../components/common/Footer';
 
 const Events = () => {
     return (

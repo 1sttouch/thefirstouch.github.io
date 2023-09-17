@@ -43,8 +43,8 @@ const LatestBlogPost = (props) => {
                                             swipeable={true}
                                             autoPlay={false}
                                             autoPlaySpeed={3000}
-                                            customRightArrow={<CustomRightArrow />}
-                                            customLeftArrow={<CustomLeftArrow />}
+                                            customRightArrow={<CustomRightArrow onClick={undefined} />}
+                                            customLeftArrow={<CustomLeftArrow onClick={undefined} />}
                                             responsive={{
                                                 laptop: {
                                                     breakpoint: {

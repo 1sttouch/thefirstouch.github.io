@@ -1,13 +1,13 @@
 import React from 'react';
-import UserHeader from '../UserHeader';
-import BreadCrumb from '../../../components/BreadCrumb';
-import Footer from '../../../components/Footer';
+import BreadCrumb from '../../../components/common/BreadCrumb';
+import Footer from '../../common/Footer';
 import CourseDetailsContent from './CourseDetailsContent';
+import Header5 from '../../common/Header5';
 
 const JourneyView = () => {
     return (
         <>
-            <UserHeader />
+            <Header5 />
             <BreadCrumb pageTitle="Course Details" />
             <CourseDetailsContent />
             <Footer/>

@@ -1,6 +1,6 @@
 import React from 'react';
 import Carousel from 'react-multi-carousel';
-import CourseData from '../jsonData/CourseData.json'
+import CourseData from '../../jsonData/CourseData.json'
 import SingleCourse from './SingleCourse';
 
 const Courses = () => {

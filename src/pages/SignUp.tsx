@@ -1,8 +1,8 @@
 import React from 'react';
-import BreadCrumb from '../components/BreadCrumb';
-import Footer from '../components/Footer';
-import Header5 from '../components/Header5';
-import JoinUs from '../components/JoinUs';
+import BreadCrumb from '../components/common/BreadCrumb';
+import Footer from '../components/common/Footer';
+import Header5 from '../components/common/Header5';
+import JoinUs from '../components/signup/JoinUs';
 
 const SignUp = () => {
     return (

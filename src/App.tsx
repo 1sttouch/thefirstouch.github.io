@@ -33,6 +33,7 @@ import UserHome from './components/user/home/UserHome';
 import UserProfile from './components/user/profile/UserProfile';
 import UserTouchPoints from './pages/UserTouchPoints';
 import OrderConsole from './components/purchase/OrderConsole';
+import { AuthProvider } from './hook/authContext';
 
 // Components 
 
@@ -49,10 +50,11 @@ function App() {
 
   return (
     <>
+     <AuthProvider>
       {isLoading ? <PreLoader /> :
         <div>
           <Helmet>
-            <title>LearaPress - Education & Courses React Template</title>
+            <title>1st touch</title>
             <link rel="shortcut icon" href="favicon.ico"></link>
           </Helmet>
 
@@ -87,6 +89,7 @@ function App() {
           <ToastContainer />
         </div>
       }
+      </AuthProvider>
     </>
   )
 }

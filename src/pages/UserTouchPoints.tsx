@@ -1,12 +1,12 @@
 import React from 'react';
-import UserHeader from '../components/user/UserHeader';
-import Footer from '../components/Footer';
+import Footer from '../components/common/Footer';
 import UserJourneyConsole from '../components/user/journey/UserJourneyConsole';
+import Header5 from '../components/common/Header5';
 
 const UserTouchPoints = () => {
     return (
         <>
-            <UserHeader />
+            <Header5 />
             <UserJourneyConsole/>
             <Footer />
         </>

@@ -1,9 +1,9 @@
 import React from 'react';
-import Header5 from '../components/Header5';
+import Header5 from '../components/common/Header5';
 import Banner from '../components/Banner';
-import BreadCrumb from '../components/BreadCrumb';
-import AllCourses from '../components/AllCourses';
-import Footer from '../components/Footer';
+import BreadCrumb from '../components/common/BreadCrumb';
+import AllCourses from '../components/courses/AllCourses';
+import Footer from '../components/common/Footer';
 
 const Course = () => {
     return (

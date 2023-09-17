@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import useFetch from '../hook/useFetch';
-import { API }  from '../common/Constants'
-import { showMessage } from '../common/Utils';
+import useFetch from '../../hook/useFetch';
+import { API }  from '../../common/Constants'
+import { showMessage } from '../../common/Utils';
+import { useAuth } from '../../hook/authContext';
 
 interface Props {
     setProgress: (porgress: boolean)=>{}
@@ -9,6 +10,7 @@ interface Props {
 }
 
 const LoginForm = ({setProgress, onSuccess}) => {
+    const {authUser, setAuthUser, setIsLoggedIn, isLoggedIn} = useAuth();
 
     const {isLoading, error, data, status, callFetch } = useFetch();
 
@@ -21,6 +23,8 @@ const LoginForm = ({setProgress, onSuccess}) => {
     
     useEffect(() => {
         if(data && status && status < 299){
+            setAuthUser(username);
+            setIsLoggedIn(true);
             reset();
             onSuccess(data);
         }

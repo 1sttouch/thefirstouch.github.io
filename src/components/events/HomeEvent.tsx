@@ -1,14 +1,22 @@
 import React, { useEffect, useState } from 'react';
-import EventData from '../jsonData/EventData.json'
-import SingleEvent from './SingleEvent';
-import useFetch from '../hook/useFetch';
-import { API } from '../common/Constants';
-import { getAPIHeaders } from '../common/Utils';
+import EventData from '../../jsonData/EventData.json'
+import SingleEvent from '../events/SingleEvent';
+import useFetch from '../../hook/useFetch';
+import { API } from '../../common/Constants';
+import { getAPIHeaders, showMessage } from '../../common/Utils';
 
 const HomeEvent = () => {
     const {isLoading, error, data, status, callFetch } = useFetch();
     const [events, setEvents] = useState<any>([]);
 
+
+    useEffect(() => {
+        if(error){
+            showMessage(error.response.data,'ERROR')
+        }
+    }, [error]);
+
+    
     useEffect(() => {
         callFetch(API.GET_EVENTS,
             'GET',

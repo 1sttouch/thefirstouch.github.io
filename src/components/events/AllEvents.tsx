@@ -1,13 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import useFetch from '../hook/useFetch';
-import { API } from '../common/Constants';
-import Spinner from './Spinner';
-import PurchaseItemCard from './PurchaseItemCard';
+import useFetch from '../../hook/useFetch';
+import { API } from '../../common/Constants';
+import Spinner from '../common/Spinner';
+import PurchaseItemCard from '../PurchaseItemCard';
+import { showMessage } from '../../common/Utils';
 
 const AllEvents = () => {
     const {isLoading, error, data, status, callFetch } = useFetch();
     const [events, setEvents] = useState<any>([]);
 
+    useEffect(() => {
+        if(error){
+            showMessage(error.response.data,'ERROR')
+        }
+    }, [error]);
+    
     useEffect(() => {
         callFetch(API.GET_EVENTS,
             'GET',

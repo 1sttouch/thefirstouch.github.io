@@ -1,5 +1,5 @@
 import React from 'react';
-import MainMenu from './MainMenu';
+import HeaderMainMenu from './HeaderMainMenu';
 import HeaderTop from './HeaderTop';
 
 const Header5 = () => {
@@ -7,7 +7,7 @@ const Header5 = () => {
         <>
             <header>
                 <HeaderTop headerBgGray={"home-v5"} />
-                <MainMenu />
+                <HeaderMainMenu />
             </header>
         </>
     );

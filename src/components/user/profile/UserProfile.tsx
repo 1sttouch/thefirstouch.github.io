@@ -1,12 +1,12 @@
 import React from 'react';
-import UserHeader from '../UserHeader';
-import Footer from '../../Footer';
+import Footer from '../../common/Footer';
 import UserProfileConsole from './UserProfileConsole';
+import Header5 from '../../common/Header5';
 
 const UserProfile = () => {
     return (
         <>
-            <UserHeader />
+            <Header5 />
             <UserProfileConsole />
             <Footer />
         </>

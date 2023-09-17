@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { getAPIHeaders, setAuthToken, showMessage } from '../../../common/Utils';
 import useFetch from '../../../hook/useFetch';
 import { API } from '../../../common/Constants';
-import Spinner from '../../Spinner';
+import Spinner from '../../common/Spinner';
 
 const ChangePassword = () => {
     const {isLoading, error, data, status, callFetch } = useFetch();

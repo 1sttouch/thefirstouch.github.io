@@ -1,6 +1,6 @@
 import React from 'react';
 import EventData from '../../../jsonData/EventData.json'
-import Pagination from '../../Pagination';
+import Pagination from '../../common/Pagination';
 import JourneySummary from './JourneySummary'
 
 const Journies = () => {

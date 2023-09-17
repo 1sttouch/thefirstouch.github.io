@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import Footer from '../Footer';
-import UserHeader from '../user/UserHeader';
+import Footer from '../common/Footer';
 import Cart from './Cart';
-import Spinner from '../Spinner';
+import Spinner from '../common/Spinner';
 import PlaceOrder from './PlaceOrder';
 import ConfirmOrder from './ConfirmOrder';
+import Header5 from '../common/Header5';
 
 
 const Purchase = () => {
@@ -16,7 +16,7 @@ const Purchase = () => {
     return (
         <>
             <Spinner show={inProgress} />
-            <UserHeader/>
+            <Header5/>
               {
                 activeStep === 0 ? 
                   <Cart setOrder={setOrder} setProgress={setProgress} setActiveStep={setActiveStep} /> :

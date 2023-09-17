@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import CarouselSlider from '../../CarouselSlider';
+import CarouselSlider from '../../common/CarouselSlider';
 import EventData from '../../../jsonData/EventData.json';
-import SingleEvent from '../../SingleEvent';
+import SingleEvent from '../../events/SingleEvent';
 import { getAPIHeaders, showMessage } from '../../../common/Utils';
 import { API } from '../../../common/Constants';
 import useFetch from '../../../hook/useFetch';
-import Spinner from '../../Spinner';
+import Spinner from '../../common/Spinner';
 import PurchaseItemCard from '../../PurchaseItemCard';
 
 const UserEvents = () => {

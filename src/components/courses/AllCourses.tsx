@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import CourseData from '../jsonData/CourseData.json'
+import CourseData from '../../jsonData/CourseData.json'
 import SingleCourse from './SingleCourse';
-import useFetch from '../hook/useFetch';
-import { getAPIHeaders, showMessage } from '../common/Utils';
-import { API } from '../common/Constants';
-import Spinner from './Spinner';
+import useFetch from '../../hook/useFetch';
+import { getAPIHeaders, showMessage } from '../../common/Utils';
+import { API } from '../../common/Constants';
+import Spinner from '../common/Spinner';
 
 const AllCourses = () => {
     const {isLoading, error, data, status, callFetch } = useFetch();
@@ -24,6 +24,12 @@ const AllCourses = () => {
             setCourses(data)
         }
     }, [data]);
+
+    useEffect(() => {
+        if(error){
+            showMessage(error.response.data,'ERROR')
+        }
+    }, [error]);
 
     return (
         <>

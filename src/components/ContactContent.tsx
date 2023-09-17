@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ContactForm from './ContactForm';
-import Spinner from './Spinner';
+import Spinner from './common/Spinner';
 import { showMessage } from '../common/Utils';
 
 

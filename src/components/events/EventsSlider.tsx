@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import CarouselSlider from './CarouselSlider';
-import { showMessage } from '../common/Utils';
-import { API } from '../common/Constants';
-import useFetch from '../hook/useFetch';
-import Spinner from './Spinner';
-import PurchaseItemCard from './PurchaseItemCard';
+import CarouselSlider from '../common/CarouselSlider';
+import { showMessage } from '../../common/Utils';
+import { API } from '../../common/Constants';
+import useFetch from '../../hook/useFetch';
+import Spinner from '../common/Spinner';
+import PurchaseItemCard from '../PurchaseItemCard';
 
 const EventsSlider = () => {
     const [children, setChildren] = useState<React.JSX.Element[]>([]);

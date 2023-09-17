@@ -1,5 +1,5 @@
 import React from 'react';
-import SocialShare from './SocialShare';
+import SocialShare from '../SocialShare';
 
 const HeaderTop = (props) => {
     let { headerBgGray } = props;

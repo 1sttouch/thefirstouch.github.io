@@ -1,6 +1,6 @@
 import React from 'react';
-import CourseData from '../jsonData/CourseData.json'
-import SingleCourse from '../components/SingleCourse'
+import CourseData from '../../jsonData/CourseData.json'
+import SingleCourse from '../SingleCourse'
 
 const AnotherCourse = (props) => {
     const { spacing } = props;

@@ -1,5 +1,5 @@
 import React from 'react';
-import OurFaqInfo from '../jsonData/OurFaqInfo.json'
+import OurFaqInfo from '../../jsonData/OurFaqInfo.json'
 import SingleFaqInfo from './SingleFaqInfo';
 
 const FaqInfo = () => {

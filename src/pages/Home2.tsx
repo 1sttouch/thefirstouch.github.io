@@ -1,9 +1,9 @@
 import React from 'react';
 import Banner from '../components/Banner';
-import CoursesH2 from '../components/CoursesH2';
-import Event from '../components/Event';
-import Footer from '../components/Footer';
-import Header5 from '../components/Header5';
+import CoursesH2 from '../components/courses/CoursesH2';
+import Event from '../components/events/Event';
+import Footer from '../components/common/Footer';
+import Header5 from '../components/common/Header5';
 import LatestBlogPost from '../components/LatestBlogPost';
 import WhyChooseH2 from '../components/WhyChooseH2';
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ContactInfoEdit from './ContactInfoEdit';
 import ContactInfoView from './ContactInfoView';
-import Spinner from '../../Spinner';
+import Spinner from '../../common/Spinner';
 
 export interface UserInfo {
     firstName: string
