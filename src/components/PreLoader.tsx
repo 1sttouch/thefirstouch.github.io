@@ -4,7 +4,7 @@ const PreLoader = () => {
     return (
         <>
             <div id="preloader">
-                <div id="learapress-preloader" className="learapress-preloader">
+                <div id="firsttouch-preloader" className="firsttouch-preloader">
                     <div className="animation-preloader">
                         <div className="spinner"></div>
                         <div className="txt-loading">

@@ -13,7 +13,7 @@ const HeaderTop = (props) => {
                             <div className="header-left">
                                 <ul>
                                     <li><a href="tel:+00 0123456789"><i className="fa-solid fa-phone"></i>+00 0123456789</a></li>
-                                    <li><a href="mailto:info@learapress.com"><i className="fa-regular fa-envelope"></i>info@learapress.com</a></li>
+                                    <li><a href="mailto:1sttouch.in@gmail.com"><i className="fa-regular fa-envelope"></i>1sttouch.in@gmail.com</a></li>
                                 </ul>
                             </div>
                         </div>

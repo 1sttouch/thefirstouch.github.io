@@ -15,7 +15,7 @@ const AboutUs = (props) => {
                         <div className="col-lg-6 col-12">
                             <div className="about-desc">
                                 <Fade left delay={200}>
-                                    <h1>Welcome To Our learapress</h1>
+                                    <h1>Welcome To 1st Touch</h1>
                                 </Fade>
                                 <Fade left delay={400}>
                                     <p>Lorem ipsum dolor sit amet, justo nunc orci donec sagittis metus dapibus, erat ullamcorper odio augue eleifend, consequat enim ullamcorper magnis dignissim nec phasellus, Lorem ipsum dolor sit amet, justo nunc orci donec sagittis metus dapibus, erat ullamcorper odio augue eleifend, consequat enim</p>

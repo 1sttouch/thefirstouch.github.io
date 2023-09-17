@@ -1,6 +1,6 @@
 /**
 
- * Theme:       LearaPress - Education & Courses React Template
+ * Theme:       1st-Touch
  * Version:     1.0
  * Author:     	Theme Earth
  * URL:         https://themeforest.net/user/themeearth
@@ -214,7 +214,7 @@ input[type=number] {
 
 /* =============== 1.Preloader =============== */
 
-.learapress-preloader {
+.firsttouch-preloader {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
@@ -233,11 +233,11 @@ input[type=number] {
 	z-index: 9000;
 }
 
-.learapress-preloader .animation-preloader {
+.firsttouch-preloader .animation-preloader {
 	z-index: 1000;
 }
 
-.learapress-preloader .animation-preloader .spinner {
+.firsttouch-preloader .animation-preloader .spinner {
 	-webkit-animation: spinner 1s infinite linear;
 	animation: spinner 1s infinite linear;
 	border-radius: 50%;
@@ -248,11 +248,11 @@ input[type=number] {
 	width: 150px;
 }
 
-.torch-red .learapress-preloader .animation-preloader .spinner {
+.torch-red .firsttouch-preloader .animation-preloader .spinner {
 	border-top-color: #ee2852;
 }
 
-.learapress-preloader .animation-preloader .txt-loading {
+.firsttouch-preloader .animation-preloader .txt-loading {
 	font: bold 5em "Poppins", sans-serif;
 	text-align: center;
 	-webkit-user-select: none;
@@ -261,12 +261,12 @@ input[type=number] {
 	user-select: none;
 }
 
-.learapress-preloader .animation-preloader .txt-loading .letters-loading {
+.firsttouch-preloader .animation-preloader .txt-loading .letters-loading {
 	color: rgba(0, 0, 0, 0.2);
 	position: relative;
 }
 
-.learapress-preloader .animation-preloader .txt-loading .letters-loading:before {
+.firsttouch-preloader .animation-preloader .txt-loading .letters-loading:before {
 	-webkit-animation: letters-loading 4s infinite;
 	animation: letters-loading 4s infinite;
 	color: #000000;
@@ -280,55 +280,55 @@ input[type=number] {
 	transform: rotateY(-90deg);
 }
 
-.learapress-preloader .animation-preloader .txt-loading .letters-loading:nth-child(2):before {
+.firsttouch-preloader .animation-preloader .txt-loading .letters-loading:nth-child(2):before {
 	-webkit-animation-delay: 0.2s;
 	animation-delay: 0.2s;
 }
 
-.learapress-preloader .animation-preloader .txt-loading .letters-loading:nth-child(3):before {
+.firsttouch-preloader .animation-preloader .txt-loading .letters-loading:nth-child(3):before {
 	-webkit-animation-delay: 0.4s;
 	animation-delay: 0.4s;
 }
 
-.learapress-preloader .animation-preloader .txt-loading .letters-loading:nth-child(4):before {
+.firsttouch-preloader .animation-preloader .txt-loading .letters-loading:nth-child(4):before {
 	-webkit-animation-delay: 0.6s;
 	animation-delay: 0.6s;
 }
 
-.learapress-preloader .animation-preloader .txt-loading .letters-loading:nth-child(5):before {
+.firsttouch-preloader .animation-preloader .txt-loading .letters-loading:nth-child(5):before {
 	-webkit-animation-delay: 0.8s;
 	animation-delay: 0.8s;
 }
 
-.learapress-preloader .animation-preloader .txt-loading .letters-loading:nth-child(6):before {
+.firsttouch-preloader .animation-preloader .txt-loading .letters-loading:nth-child(6):before {
 	-webkit-animation-delay: 1s;
 	animation-delay: 1s;
 }
 
-.learapress-preloader .animation-preloader .txt-loading .letters-loading:nth-child(7):before {
+.firsttouch-preloader .animation-preloader .txt-loading .letters-loading:nth-child(7):before {
 	-webkit-animation-delay: 1.2s;
 	animation-delay: 1.2s;
 }
 
-.learapress-preloader .animation-preloader .txt-loading .letters-loading:nth-child(8):before {
+.firsttouch-preloader .animation-preloader .txt-loading .letters-loading:nth-child(8):before {
 	-webkit-animation-delay: 1.4s;
 	animation-delay: 1.4s;
 }
 
-.learapress-preloader.dark .animation-preloader .spinner {
+.firsttouch-preloader.dark .animation-preloader .spinner {
 	border-color: rgba(255, 255, 255, 0.2);
 	border-top-color: #fff;
 }
 
-.learapress-preloader.dark .animation-preloader .txt-loading .letters-loading {
+.firsttouch-preloader.dark .animation-preloader .txt-loading .letters-loading {
 	color: rgba(255, 255, 255, 0.2);
 }
 
-.learapress-preloader.dark .animation-preloader .txt-loading .letters-loading:before {
+.firsttouch-preloader.dark .animation-preloader .txt-loading .letters-loading:before {
 	color: #fff;
 }
 
-.learapress-preloader p {
+.firsttouch-preloader p {
 	font-size: 14px;
 	font-weight: 600;
 	text-transform: uppercase;
@@ -336,7 +336,7 @@ input[type=number] {
 	color: #3b3b3b;
 }
 
-.learapress-preloader .loader {
+.firsttouch-preloader .loader {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -347,15 +347,15 @@ input[type=number] {
 	pointer-events: none;
 }
 
-.learapress-preloader .loader .row {
+.firsttouch-preloader .loader .row {
 	height: 100%;
 }
 
-.learapress-preloader .loader .loader-section {
+.firsttouch-preloader .loader .loader-section {
 	padding: 0px;
 }
 
-.learapress-preloader .loader .loader-section .bg {
+.firsttouch-preloader .loader .loader-section .bg {
 	background-color: #ffffff;
 	height: 100%;
 	left: 0;
@@ -365,18 +365,18 @@ input[type=number] {
 	transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
 }
 
-.learapress-preloader .loader.dark_bg .loader-section .bg {
+.firsttouch-preloader .loader.dark_bg .loader-section .bg {
 	background: #111339;
 }
 
-.learapress-preloader.loaded .animation-preloader {
+.firsttouch-preloader.loaded .animation-preloader {
 	opacity: 0;
 	-webkit-transition: 0.3s ease-out;
 	-o-transition: 0.3s ease-out;
 	transition: 0.3s ease-out;
 }
 
-.learapress-preloader.loaded .loader-section .bg {
+.firsttouch-preloader.loaded .loader-section .bg {
 	width: 0;
 	-webkit-transition: 0.7s 0.3s allcubic-bezier(0.1, 0.1, 0.1, 1);
 	-o-transition: 0.7s 0.3s allcubic-bezier(0.1, 0.1, 0.1, 1);
