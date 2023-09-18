@@ -2760,6 +2760,7 @@ a.blog-read-more::before {
 
 .blog-sec .sec-title h1 {
 	position: absolute;
+	z-index:1;
 }
 
 /* ----- Latest Blog Custom Arrow ----- */

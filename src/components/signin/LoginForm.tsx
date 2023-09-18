@@ -28,7 +28,7 @@ const LoginForm = ({setProgress, onSuccess}) => {
             reset();
             onSuccess(data);
         }
-    }, [data]);
+    }, [status]);
 
     useEffect(() => {
         if(error){

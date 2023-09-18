@@ -2,7 +2,7 @@ import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import { durationInHoursMins, showMessage } from '../../common/Utils';
 import AddToCartButton from '../purchase/AddToCartButton';
-
+import { Fade } from 'react-reveal';
 interface Props {
     course : any
 }
@@ -12,6 +12,7 @@ const SingleCourse = ({ course }:Props) => {
 
     return (
         <>
+        <Fade right delay={100}>
             <div className="course-inner">
                 <div className="course-thumb">
                     <img src={`${image}`} alt="courseImage" />
@@ -42,6 +43,7 @@ const SingleCourse = ({ course }:Props) => {
                     </ul>
                 </div>
             </div>
+            </Fade>
         </>
     );
 };

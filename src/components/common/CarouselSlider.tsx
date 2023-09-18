@@ -1,12 +1,14 @@
+import { HashLink as Link } from 'react-router-hash-link';
 import React from 'react';
 import Carousel from 'react-multi-carousel';
 
 interface Props {
     heading: string
+    headingLink?: string
     children: React.JSX.Element[]
 }
 
-const CarouselSlider = ({heading, children}: Props) => {
+const CarouselSlider = ({heading, headingLink, children}: Props) => {
 
     const CustomRightArrow = ({ onClick }) => {
         return <button className='commonArrow arrowRight' onClick={() => onClick()}><i className="fa-solid fa-chevron-right"></i></button>;
@@ -25,7 +27,12 @@ const CarouselSlider = ({heading, children}: Props) => {
                         <div className="row">
                             <div className="col-md-12">
                                 <div className="sec-title">
-                                    <h1>{heading}</h1>
+                                {
+                                    headingLink ? <Link to={`${headingLink}`}><h1>{heading}<h6>view all</h6></h1></Link>
+                                
+                                    : <h1>{heading}</h1>
+                                }
+                                
                                 </div>
                             </div>
                         </div>

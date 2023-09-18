@@ -7,6 +7,7 @@ import { API } from '../../../common/Constants';
 import useFetch from '../../../hook/useFetch';
 import Spinner from '../../common/Spinner';
 import PurchaseItemCard from '../../PurchaseItemCard';
+import { Fade } from 'react-reveal';
 
 const UserEvents = () => {
     const [children, setChildren] = useState<React.JSX.Element[]>([]);
@@ -53,7 +54,10 @@ const UserEvents = () => {
     return (
         <>
             <Spinner show={isLoading} />
-            { data?.length ? <CarouselSlider children={children} heading={"Your Events"}/> : <></> }
+            { data?.length ? 
+                <Fade right delay={100}><CarouselSlider children={children} heading={"Your Events"}/> </Fade>
+                : <></> 
+            }
         </>
     );
 };

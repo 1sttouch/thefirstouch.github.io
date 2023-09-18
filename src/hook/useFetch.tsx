@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-
+import { showMessage } from "../common/Utils";
+import { useNavigate } from "react-router-dom";
+import { useLocation } from 'react-router-dom';
 interface FetchCall {
   data: any
   status: number | null
@@ -15,6 +17,10 @@ interface FetchCall {
 
  
 const useFetch = ():FetchCall => {
+  
+    const navigate = useNavigate();
+    const location = useLocation()
+
     const [data,setData] = useState<any>(null);
     const [status,setStatus] = useState<number | null>(null);
     const [isLoading,setIsLoading] = useState<boolean>(false);
@@ -45,6 +51,11 @@ const useFetch = ():FetchCall => {
         } catch (error) {
             setError(error);
             setStatus(error?.response?.status)
+
+            if(error?.response?.status === 401 && location.pathname !== '/signin'){
+              navigate('/signin?path='+location.pathname);
+            } 
+
         } finally {
             setIsLoading(false)
         }

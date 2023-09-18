@@ -1,6 +1,6 @@
 import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
-import footerLogo from '/img/logo/logoLight.png'
+import footerLogo from '/img/comment/commenter_1.jpg'
 
 const Footer = () => {
     return (
@@ -16,7 +16,7 @@ const Footer = () => {
                                     <Link to="/#"><img src={footerLogo} alt="footerLogo" /></Link>
                                 </div>
                             </div>
-                            <div className="col-lg-3 col-md-6">
+                            {/* <div className="col-lg-3 col-md-6">
                                 <div className="footer-widget-menu">
                                     <h2>our Course</h2>
                                     <ul>
@@ -27,16 +27,15 @@ const Footer = () => {
                                         <li><Link to="/contact#">Support Center</Link></li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div> */}
                             <div className="col-lg-3 col-md-6">
                                 <div className="footer-widget-menu">
                                     <h2>Quick Links</h2>
                                     <ul>
                                         <li><Link to="/contact#">Support Center</Link></li>
-                                        <li><Link to="#">Create Account</Link></li>
-                                        <li><Link to="#">business Policy</Link></li>
-                                        <li><Link to="/contact#">Terms and condition</Link></li>
-                                        <li><Link to="#">Analysis Course</Link></li>
+                                        <li><Link to="/faq#">FAQs</Link></li>
+                                        <li><Link to="/signup#">Join Us</Link></li>
+                                        <li><Link to="/about#">All About Us</Link></li>
                                     </ul>
                                 </div>
                             </div>
@@ -50,8 +49,8 @@ const Footer = () => {
                                                     <span className="icon"><i className="fa fa-map-marker"></i></span>
                                                 </div>
                                                 <div className="media-body">
-                                                    <span className="inner-text d-block">4080 Little Acres Lane Mattoon</span>
-                                                    <span className='inner-text'>IL 61938, United States</span>
+                                                    <span className="inner-text d-block">273 Jagriti Vihar, Meerut</span>
+                                                    <span className='inner-text'>Uttar Pradesh, India</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -62,8 +61,8 @@ const Footer = () => {
                                                 </div>
                                                 <div className="media-body">
                                                     <span className="inner-text">
-                                                        <a className='text-dimmed d-block' href="mailto:yourmail@gmail.com">yourmail@gmail.com</a>
-                                                        <a className='text-dimmed' href="mailto:info@eduteach.com">info@eduteach.com</a>
+                                                        <a className='text-dimmed d-block' href="mailto:1sttouch.in@gmail.com">1sttouch.in@gmail.com</a>
+                                                        <a className='text-dimmed' href="mailto:info.1sttouch.in@gmail.com">info.1sttouch.in@gmail.com</a>
                                                     </span>
                                                 </div>
                                             </div>
@@ -75,8 +74,8 @@ const Footer = () => {
                                                 </div>
                                                 <div className="media-body">
                                                     <span className="inner-text">
-                                                        <a className='text-dimmed d-block' href="tel:+880 23456789">+880 23456789</a>
-                                                        <a className='text-dimmed' href="tel:27-2564687">27 2564687</a>
+                                                        <a className='text-dimmed d-block' href="tel:+880 23456789">+91 0123456789</a>
+                                                        <a className='text-dimmed' href="tel:27-2564687">91212-2564687</a>
                                                     </span>
                                                 </div>
                                             </div>
@@ -93,7 +92,7 @@ const Footer = () => {
                         <div className="row">
                             <div className="col-md-12 col-sm-12">
                                 <div className="copy-right">
-                                    <p>Copyright {(new Date().getFullYear())} &copy; <span><Link to="#">themeEarth,</Link></span> Designed by:<span> Sweety Jahan</span></p>
+                                    <p>Copyright {(new Date().getFullYear())} &copy; <span><Link to="#">1st Touch,</Link></span> Subsidiary of:<span> NPFF</span></p>
                                 </div>
                             </div>
                         </div>

@@ -5,6 +5,7 @@ import { API } from '../../common/Constants';
 import useFetch from '../../hook/useFetch';
 import Spinner from '../common/Spinner';
 import PurchaseItemCard from '../PurchaseItemCard';
+import { Fade } from 'react-reveal';
 
 const EventsSlider = () => {
     const [children, setChildren] = useState<React.JSX.Element[]>([]);
@@ -52,7 +53,9 @@ const EventsSlider = () => {
     return (
         <>
             <Spinner show={isLoading} />
-            { data?.length ? <CarouselSlider children={children} heading={"Checkout Our Other Events"}/> : <></> }
+            { data?.length ? 
+                <Fade rigth delay={100}> <CarouselSlider headingLink={"/events"} children={children} heading={"Checkout Our Other Events"}/> </Fade>
+            : <></> }
         </>
     );
 };

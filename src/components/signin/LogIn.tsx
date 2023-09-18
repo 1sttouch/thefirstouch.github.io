@@ -4,13 +4,17 @@ import InstructorData from "../../jsonData/InstructorData.json"
 import LoginForm from './LoginForm';
 import SingleAddedStudent from '../SingleAddedStudent';
 import Carousel from 'react-multi-carousel';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router';
 import Spinner from '../common/Spinner';
 import { setAuthToken } from '../../common/Utils';
+import { useSearchParams } from 'react-router-dom'
 
 const LogIn = () => {
     const [inProgress, setProgress] = useState<boolean>(false);
     const navigate = useNavigate();
+
+    const [searchParams, setSearchParams] = useSearchParams()
     
     const CustomRightArrow = ({ onClick }) => {
         return <button className='commonArrow arrowRight' onClick={() => onClick()}><i className="fa-solid fa-chevron-right"></i></button>;
@@ -23,7 +27,15 @@ const LogIn = () => {
 
     const onSuccess = (data) => {
         setAuthToken(data?.token)
-        navigate('/user-home');
+        let path = searchParams.get('path')
+        console.log('on success')
+        if(path){
+            console.log('path',path)
+            navigate(path)
+        } else {
+            console.log('home')
+            navigate('/user-home');
+        }     
     };
 
     return (

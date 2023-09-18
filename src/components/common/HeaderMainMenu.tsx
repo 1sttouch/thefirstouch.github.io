@@ -2,15 +2,17 @@ import React, { useEffect, useState } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import logo from '/img/comment/commenter_1.jpg'
 import MenuItems from './HeaderMenuItems';
-import OffCanvasMenu from '../OffCanvasMenu';
+import OffCanvasMenu from './OffCanvasMenu';
 import { useAuth } from '../../hook/authContext';
 import { Button, IconButton, Typography } from '@mui/material';
 import MenuDropDown from './MenuDropDown';
 import UserIconButton from '../user/profile/UserIconButton';
 import CartIconButton from '../purchase/CartIconButton';
+import { useNavigate } from 'react-router-dom';
+import { removeAuthToken } from '../../common/Utils';
 
 const HeaderMainMenu = (props) => {
-	const {authUser, setAuthUser, setIsLoggedIn, isLoggedIn} = useAuth() ;
+	const {isLoggedIn} = useAuth() ;
 	const { menuBg } = props;
 	const [isSticky, setIsSticky] = useState(false);
 
@@ -69,7 +71,7 @@ const HeaderMainMenu = (props) => {
 								<div className="col-lg-1 d-none d-lg-block apply-button-area" 
 									style={{position: 'absolute', right: "60px", minWidth: "140px"}}>
 									<div className="apply-button">
-										<Link to="/signin#">Login In</Link>
+										<Link to="/signin#">Log In</Link>
 									</div>
 								</div>
 							</>

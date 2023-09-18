@@ -4,6 +4,7 @@ import { API } from '../../common/Constants';
 import Spinner from '../common/Spinner';
 import PurchaseItemCard from '../PurchaseItemCard';
 import { showMessage } from '../../common/Utils';
+import { Fade } from 'react-reveal';
 
 const AllEvents = () => {
     const {isLoading, error, data, status, callFetch } = useFetch();
@@ -42,7 +43,9 @@ const AllEvents = () => {
                         {events.map(event =>
                             <div className="col-xl-6 col-lg-12" key={event.id}>
                                 {/* <SingleEvent event={event} /> */}
-                                <PurchaseItemCard purchaseItem={event} showActionBar showAddToCart/>
+                                <Fade right delay={100}>
+                                    <PurchaseItemCard purchaseItem={event} showActionBar showAddToCart/>
+                                </Fade>
                             </div>
                         )}
                         {/* <Pagination /> */}

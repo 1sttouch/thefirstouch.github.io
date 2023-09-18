@@ -1,19 +1,12 @@
 import React, { useState } from 'react';
 import { NavHashLink as Link } from 'react-router-hash-link';
 import { useAuth } from '../../hook/authContext';
+import { useNavigate } from 'react-router-dom';
+import { removeAuthToken } from '../../common/Utils';
 
 const HeaderMenuItems = () => {
-    const {authUser, setAuthUser, setIsLoggedIn, isLoggedIn} = useAuth() ;
-     
-    const [isSearchVisible, setIsSearchVisible] = useState(true);
-    const toggleIcon = () => {
-        setIsSearchVisible(!isSearchVisible);
-    }
+    const { isLoggedIn} = useAuth() ;
 
-    const handleSearch = (event) => {
-        event.preventDefault()
-        event.target.reset()
-    }
 
     return (
         <>
@@ -21,7 +14,12 @@ const HeaderMenuItems = () => {
                 <nav id="main-menu" className="main-menu">
                     <ul>
                         <li>
+                            {
+                            !isLoggedIn ?
                             <Link to="/">Home</Link>
+                            :
+                            <Link to="/user-home">My View</Link>
+                            }
                         </li>
                         <li>
                             <Link to="/course#">Courses</Link>
@@ -31,14 +29,6 @@ const HeaderMenuItems = () => {
                         </li>
                         <li><Link to="/about#">About Us</Link></li>
                         <li><Link to="/contact#">Contact Us</Link></li>
-                        {/* {
-                        !isLoggedIn ?
-                            <>
-                                <li><Link to="/signup#">Sign Up</Link></li>
-                                <li><Link to="/signin#">Sign In</Link></li>
-                            </>
-                         : <></>
-                        } */}
                     </ul>
                 </nav>
             </div>

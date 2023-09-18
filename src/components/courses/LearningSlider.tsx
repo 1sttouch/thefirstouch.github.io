@@ -7,6 +7,7 @@ import { API } from '../../common/Constants';
 import Spinner from '../common/Spinner';
 import CarouselSlider from '../common/CarouselSlider';
 import PurchaseItemCard from '../PurchaseItemCard';
+import { Fade } from 'react-reveal';
 
 const LearningsSlider = () => {
     const {isLoading, error, data, status, callFetch } = useFetch();
@@ -43,7 +44,9 @@ const LearningsSlider = () => {
     return (
         <>
             <Spinner show={isLoading} />
-            { data?.length ? <CarouselSlider children={children} heading={"Checkout Our Other Learnings"}/> : <></> }
+            { data?.length ? 
+               <Fade right delay={100}> <CarouselSlider headingLink={"/course"} children={children} heading={"Checkout Our Other Learnings"}/></Fade>
+            : <></> }
         </>
     );
 };

@@ -6,7 +6,7 @@ import Popper from '@mui/material/Popper';
 import MenuItem from '@mui/material/MenuItem';
 import MenuList from '@mui/material/MenuList';
 import Stack from '@mui/material/Stack';
-import { IconButton } from '@mui/material';
+import { IconButton, Typography } from '@mui/material';
 import React from 'react';
 
 export interface ActionItem {
@@ -29,6 +29,7 @@ export default function MenuDropDown({items, iconEle}: Props) {
 
 
   const handleMenuItemClick = (event: Event | React.SyntheticEvent, onClickAction: () => void) => {
+    event.preventDefault()
     if(onClickAction){
       onClickAction()
     }
@@ -101,17 +102,33 @@ export default function MenuDropDown({items, iconEle}: Props) {
                     id="composition-menu"
                     aria-labelledby="composition-button"
                     onKeyDown={handleListKeyDown}
+                    style={{margin:0, padding:0, minWidth:200, border:"1px solid #011e40", }}
                   >
-                    {/* <MenuItem onClick={handleMenuItemClick}>Profile</MenuItem>
-                    <MenuItem onClick={handleMenuItemClick}>My account</MenuItem>
-                    <MenuItem onClick={handleMenuItemClick}>Logout</MenuItem> */}
-
                     {
                       items?.map((item: ActionItem) => {
                         return (
                           <MenuItem 
-                            onClick={(e)=>{ handleMenuItemClick(e, item.action) }} >
-                            {item.name}
+                            onClick={(e)=>{ handleMenuItemClick(e, item.action) }} 
+                            sx={{
+                              minWidth: '100%',
+                              justifyContent: 'center',
+                              backgroundColor:'#fff',
+                              color:"#011e40",
+                              "&:hover": {
+                                backgroundColor: "#011e40",
+                                color: "#fff",
+                            },
+                            }}
+                            >
+                            <Typography
+                              sx={{
+                                fontStyle: 'bold',
+                                fontSize: 20,
+                                fontWeight: 500,                                
+                              }}
+                            >
+                                {item.name}
+                            </Typography>
                           </MenuItem>)
                       })
                     }
