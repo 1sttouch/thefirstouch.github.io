@@ -8,30 +8,37 @@ import Typography from '@mui/material/Typography';
 import AddToCartButton from './purchase/AddToCartButton';
 import { durationInHoursMins, getDayMonthTime, showMessage } from '../common/Utils';
 import { HashLink as Link } from 'react-router-hash-link';
+import { useNavigate } from 'react-router-dom';
 
 interface Props {
   purchaseItem?:any
+  itemLink?: string
   showAddToCart?:boolean
   showRatting?:boolean
   showActionBar?:boolean
+  maxWidth?:number
 }
 
 
-const showAlert = () => {
-  showMessage("CLicked","SUCCESS")
-}
+function PurchaseItemCard({purchaseItem, showAddToCart, showRatting, showActionBar, maxWidth=500, itemLink} :Props) {
+  const navigate = useNavigate();
 
+  const onItemClick = (event) => {
+    event.preventDefault();
+    if(itemLink){
+      navigate(itemLink);
+    }
+  }
 
-function PurchaseItemCard({purchaseItem, showAddToCart, showRatting, showActionBar} :Props) {
   return (
-    <Card sx={{ maxWidth: 500, margin: 1 }}>
+    <Card sx={{ maxWidth: {maxWidth}, margin: 1 }}>
       
       <CardMedia
         sx={{ height: 140 }}
         image={purchaseItem?.image}
         title={purchaseItem?.title}
       />
-      <CardContent onClick={showAlert} style={{ cursor: "pointer"}}>
+      <CardContent onClick={onItemClick} style={{ cursor: "pointer"}}>
         <Typography variant="h5" component="div">
           <span className="course-price">₹{purchaseItem?.amount}</span>
           {  showRatting 

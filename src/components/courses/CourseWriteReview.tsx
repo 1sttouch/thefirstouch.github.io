@@ -1,5 +1,5 @@
 import React from 'react';
-import { showMessage } from '../../../common/Utils';
+import { showMessage } from '../../common/Utils';
 
 
 const handleSend = (event) => {

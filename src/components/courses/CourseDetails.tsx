@@ -1,10 +1,10 @@
 import React from 'react';
-import BreadCrumb from '../../../components/common/BreadCrumb';
-import Footer from '../../common/Footer';
+import BreadCrumb from '../common/BreadCrumb';
+import Footer from '../common/Footer';
 import CourseDetailsContent from './CourseDetailsContent';
-import Header5 from '../../common/Header5';
+import Header5 from '../common/Header5';
 
-const JourneyView = () => {
+const CourseDetails = () => {
     return (
         <>
             <Header5 />
@@ -15,4 +15,4 @@ const JourneyView = () => {
     );
 };
 
-export default JourneyView;
+export default CourseDetails;

@@ -19,7 +19,9 @@ const LearningsSlider = () => {
         if(courses){
             let items :React.JSX.Element[] =[]
             courses.map(course =>
-                items.push(<PurchaseItemCard purchaseItem={course} showActionBar showAddToCart/>)
+                items.push(<PurchaseItemCard 
+                    itemLink={`/learnings/learning?id=${course?._id}`}
+                    purchaseItem={course} showActionBar showAddToCart/>)
             )
             setChildren(items)
         }
@@ -44,9 +46,9 @@ const LearningsSlider = () => {
     return (
         <>
             <Spinner show={isLoading} />
-            { data?.length ? 
-               <Fade right delay={100}> <CarouselSlider headingLink={"/course"} children={children} heading={"Checkout Our Other Learnings"}/></Fade>
-            : <></> }
+            <Fade right delay={100}> 
+            <CarouselSlider headingLink={"/learnings"} 
+            children={children} heading={"Checkout Our Other Learnings"}/></Fade>
         </>
     );
 };

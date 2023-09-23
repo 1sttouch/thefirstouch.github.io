@@ -3,6 +3,7 @@ import { HashLink as Link } from 'react-router-hash-link';
 import { getAPIHeaders, showMessage } from '../../../common/Utils';
 import useFetch from '../../../hook/useFetch';
 import { API } from '../../../common/Constants';
+import moment from 'moment';
 
 interface Props {
     setEnableEdit: (enable: boolean)=>void
@@ -17,6 +18,7 @@ const ContactInfoView = ({setEnableEdit, setUserInfo, setProgress}:Props) => {
     const[lastName, setLastName] = useState<string>();
     const[email, setEmail] = useState<string>();
     const[phoneNumber, setPhoneNumber] = useState<string>();
+    const[dateOfBirth, setDateOfBirth] = useState<string | undefined>();
 
     useEffect(() => {
         setProgress(isLoading)
@@ -38,6 +40,7 @@ const ContactInfoView = ({setEnableEdit, setUserInfo, setProgress}:Props) => {
             setLastName(data.lastName)
             setEmail(data.email)
             setPhoneNumber(data.phoneNumber)
+            setDateOfBirth(data.dob ? moment.unix(data.dob).format('DD-MMM-YYYY') : '')
         }
     }, [data]);
 
@@ -59,7 +62,7 @@ const ContactInfoView = ({setEnableEdit, setUserInfo, setProgress}:Props) => {
                     <ul>
                         <li>First Name:<span>{firstName}</span></li>
                         <li>Last Name:<span>{lastName}</span></li>
-                        <li>Date of Birth:<span>{}</span></li>
+                        <li>Date of Birth:<span>{dateOfBirth}</span></li>
                         <li>Email Address:<span>{email}</span></li>
                         <li>Phone number:<span>{phoneNumber}</span></li>
                     </ul>

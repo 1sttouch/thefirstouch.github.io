@@ -22,7 +22,7 @@ const HeaderMenuItems = () => {
                             }
                         </li>
                         <li>
-                            <Link to="/course#">Courses</Link>
+                            <Link to="/learnings#">Learnings</Link>
                         </li>
                         <li>
                             <Link to="/events#">Events</Link>

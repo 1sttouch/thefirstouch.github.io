@@ -13,9 +13,9 @@ const Home2 = () => {
             <Header5 />
             <Banner />
             <WhyChooseH2 />
-            <CoursesH2 courseV2="home-v2" />
+            <CoursesH2/>
             <Event />
-            <LatestBlogPost blogStyle="home-v2" />
+            <LatestBlogPost/>
             <Footer />
         </>
     );

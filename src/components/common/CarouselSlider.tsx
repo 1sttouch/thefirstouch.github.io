@@ -1,6 +1,7 @@
 import { HashLink as Link } from 'react-router-hash-link';
 import React from 'react';
 import Carousel from 'react-multi-carousel';
+import NoData from './NoData';
 
 interface Props {
     heading: string
@@ -40,7 +41,7 @@ const CarouselSlider = ({heading, headingLink, children}: Props) => {
                             <div className="col-md-12">
                                 <div className="all-latest-news">
                                     <div className="latest-blog-carousel-wrap">
-                                        <Carousel
+                                    {children?.length ?  <Carousel
                                             infinite={true}
                                             draggable={true}
                                             arrows={true}
@@ -82,6 +83,8 @@ const CarouselSlider = ({heading, headingLink, children}: Props) => {
                                             {children}
 
                                         </Carousel>
+                                        : <NoData/>
+                                        }
                                     </div>
                                 </div>
                             </div>

@@ -17,8 +17,10 @@ const UserLearnings = () => {
 
         if(learnings){
             let items :React.JSX.Element[] =[]
-            learnings.map(event =>
-                items.push(<PurchaseItemCard purchaseItem={event} showRatting/>)
+            learnings.map(learning =>
+                items.push(<PurchaseItemCard 
+                     itemLink={`/user-touchpoints/touchpoint?id=${learning._id}`}
+                     purchaseItem={learning} showRatting/>)
             )
             setChildren(items)
         }
@@ -52,8 +54,14 @@ const UserLearnings = () => {
     return (
         <>
             <Spinner show={isLoading} />
-            {data?.length ? 
-                <Fade right delay={100}><CarouselSlider children={children} heading={"Your Learnings"}/> </Fade>
+            {children?.length ? 
+                <Fade right delay={100}>
+                    <CarouselSlider 
+                    children={children} 
+                    heading={"Your Learnings"}
+                    headingLink='/user-touchpoints'
+                    /> 
+                </Fade>
             : <></>}
         </>
     );

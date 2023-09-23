@@ -8,6 +8,7 @@ export interface UserInfo {
     lastName: string
     phoneNumber: number
     email: string
+    dob: number
     _id: string
 }
 

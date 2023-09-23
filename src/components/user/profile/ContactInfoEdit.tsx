@@ -3,6 +3,8 @@ import { API } from '../../../common/Constants';
 import { getAPIHeaders, showMessage } from '../../../common/Utils';
 import useFetch from '../../../hook/useFetch';
 import { UserInfo } from './ContactInfo';
+import DatePicker from '../../common/DatePicker';
+import moment from 'moment';
 
 interface Props {
     setEnableEdit: (enable: boolean)=>void
@@ -18,6 +20,7 @@ const ContactInfoEdit = ({setEnableEdit, userInfo, setProgress}: Props) => {
     const[lastName, setLastName] = useState<string | undefined>(userInfo?.lastName);
     const[email, setEmail] = useState<string| undefined>(userInfo?.email);
     const[phoneNumber, setPhoneNumber] = useState<string | undefined>(String(userInfo?.phoneNumber));
+    const[dateOfBirth, setDateOfBirth] = useState<string | undefined>(moment.unix(userInfo?.dob ?? 0).format('YYYY-MM-DD'));
 
     useEffect(() => {
         setProgress(isLoading)
@@ -48,7 +51,8 @@ const ContactInfoEdit = ({setEnableEdit, userInfo, setProgress}: Props) => {
                 firstName: firstName,
                 lastName: lastName,
                 email: email,
-                phoneNumber: Number(phoneNumber)
+                phoneNumber: Number(phoneNumber),
+                dob: moment(dateOfBirth, "YYYY-MM-DD").unix()
             }
         );    
     }
@@ -74,6 +78,9 @@ const ContactInfoEdit = ({setEnableEdit, userInfo, setProgress}: Props) => {
                             <div className="single-input-field">
                                         <input type="number" name='phone-number' autoComplete='off' placeholder="Phone Number *" required
                                         onChange={(e)=>setPhoneNumber(e.target.value)} value={phoneNumber}/>
+                            </div>
+                            <div className="single-input-field">
+                                <DatePicker value={dateOfBirth} setValue={setDateOfBirth}/>
                             </div>
                             <button className='register-btn' type="submit" name='submit'>Save</button>
                     </div>

@@ -30,7 +30,7 @@ const ContactForm = ({setProgress, onSuccess}) => {
 
     useEffect(() => {
         if(error){
-           showMessage(error.response.data,'ERROR')
+           showMessage(error.response?.data,'ERROR')
         }
     }, [error]);
 
@@ -53,7 +53,7 @@ const ContactForm = ({setProgress, onSuccess}) => {
             email: email,
             phoneNumber: Number(phoneNumber)
         }
-        console.log('payload',payload)
+       
         callFetch(API.QUERY,
                 'POST',
                 null,

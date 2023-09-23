@@ -1,5 +1,5 @@
 import React from 'react';
-import CourseCurriculumData from '../../../jsonData/CourseCurriculumData.json'
+import CourseCurriculumData from '../../jsonData/CourseCurriculumData.json'
 import SingleCourseAccordion from './SingleCourseAccordion';
 
 const CourseCurriculum = () => {

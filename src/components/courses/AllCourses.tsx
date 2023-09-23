@@ -5,6 +5,7 @@ import useFetch from '../../hook/useFetch';
 import { getAPIHeaders, showMessage } from '../../common/Utils';
 import { API } from '../../common/Constants';
 import Spinner from '../common/Spinner';
+import NoData from '../common/NoData';
 
 const AllCourses = () => {
     const {isLoading, error, data, status, callFetch } = useFetch();
@@ -27,7 +28,7 @@ const AllCourses = () => {
 
     useEffect(() => {
         if(error){
-            showMessage(error.response.data,'ERROR')
+            showMessage(error.response?.data,'ERROR')
         }
     }, [error]);
 
@@ -37,11 +38,11 @@ const AllCourses = () => {
             <section className="course-page-sec pt-100 pb-70">
                 <div className="container">
                     <div className="row">
-                        {courses.map(course =>
+                        {courses?.length ? courses.map(course =>
                             <div className="col-lg-4 col-md-6 col-12" key={course._id}>
                                 <SingleCourse course={course}/>
                             </div>
-                        )}
+                        ) : <NoData/>}
                     </div>
                 </div>
             </section>

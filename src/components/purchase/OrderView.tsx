@@ -29,7 +29,9 @@ const OrderView = ({order}:Props) => {
         <>
             <h1 className="faq-style1-title">Your Order Items</h1>
             {purcahseItems.map(item =>
-                <PurchaseItemCard purchaseItem={item} key={item._id} />
+                <PurchaseItemCard 
+                purchaseItem={item}
+                key={item._id} />
             )}
         </>
     );

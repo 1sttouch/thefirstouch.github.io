@@ -14,7 +14,7 @@ const SingleChoose = ({ choose }) => {
                     </div>
                 </div>
                 <div className="why-choose-text">
-                    <h2><Link to="/course#">{title}</Link></h2>
+                    <h2><Link to="/events/event#">{title}</Link></h2>
                     <p>{text}</p>
                 </div>
             </div>

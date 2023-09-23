@@ -19,7 +19,6 @@ import { ToastContainer } from 'react-toastify';
 import React from 'react';
 import PreLoader from './components/PreLoader';
 import ScrollUpBtn from './components/ScrollUpBtn';
-import JourneyView from './components/user/journey/JourneyView';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Course from './pages/Course';
@@ -34,11 +33,12 @@ import UserProfile from './components/user/profile/UserProfile';
 import UserTouchPoints from './pages/UserTouchPoints';
 import OrderConsole from './components/purchase/OrderConsole';
 import { AuthProvider } from './hook/authContext';
+import EventDetails from './components/events/EventDetails';
+import CourseDetails from './components/courses/CourseDetails';
 
 // Components 
 
 function App() {
-
   //  Preloader 
   let [isLoading, setIsLoading] = useState(true)
 
@@ -64,9 +64,11 @@ function App() {
             <Route path='/' element={<Home2 />}> </Route>
             <Route path='/home' element={<Home2 />}> </Route>
 
-            <Route path='/course' element={<Course />}> </Route>
+            <Route path='/learnings' element={<Course />}> </Route>
+            <Route path='/learnings/learning' element={<CourseDetails />}> </Route>
 
             <Route path='/events' element={<Events />}> </Route>
+            <Route path='/events/event-details' element={<EventDetails />}> </Route>
 
             <Route path='/about' element={<About />}> </Route>
 
@@ -83,7 +85,7 @@ function App() {
             <Route path='/user-home' element={<UserHome />}> </Route>
             <Route path='/user-profile' element={<UserProfile />}> </Route>
             <Route path='/user-touchpoints' element={<UserTouchPoints />}> </Route>
-            <Route path='/user-touchpoints/touchpoint' element={<JourneyView />}> </Route>
+            <Route path='/user-touchpoints/touchpoint' element={<CourseDetails />}> </Route>
           </Routes>
           <ScrollUpBtn />
           <ToastContainer />

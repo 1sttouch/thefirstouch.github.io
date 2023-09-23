@@ -6,6 +6,7 @@ import useFetch from '../../hook/useFetch';
 import Spinner from '../common/Spinner';
 import PurchaseItemCard from '../PurchaseItemCard';
 import { Fade } from 'react-reveal';
+import NoData from '../common/NoData';
 
 const EventsSlider = () => {
     const [children, setChildren] = useState<React.JSX.Element[]>([]);
@@ -18,7 +19,9 @@ const EventsSlider = () => {
         if(events){
             let items :React.JSX.Element[] =[]
             events.map(event =>
-                items.push(<PurchaseItemCard purchaseItem={event} showActionBar showAddToCart/>)
+                items.push(<PurchaseItemCard
+                    itemLink={`/events/event-details?id=${event._id}`}
+                    purchaseItem={event} showActionBar showAddToCart/>)
             )
             setChildren(items)
         }
@@ -53,9 +56,15 @@ const EventsSlider = () => {
     return (
         <>
             <Spinner show={isLoading} />
-            { data?.length ? 
-                <Fade rigth delay={100}> <CarouselSlider headingLink={"/events"} children={children} heading={"Checkout Our Other Events"}/> </Fade>
-            : <></> }
+           
+                <Fade rigth delay={100}> 
+                    <CarouselSlider
+                     headingLink={"/events"} 
+                     children={children} 
+                     heading={"Checkout Our Other Events"}
+                     /> 
+                </Fade>
+            
         </>
     );
 };

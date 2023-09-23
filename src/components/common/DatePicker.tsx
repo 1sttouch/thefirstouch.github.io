@@ -2,9 +2,18 @@ import React from 'react';
 import { TextField } from '@mui/material';
 
 interface Props {
+    value?: string
+    setValue?: (value: string)=>void
 }
 
-const DatePicker = () => {
+const DatePicker = ({value, setValue}:Props) => {
+
+    const onChange = (event) => {
+        if(setValue && event?.target?.value){
+            setValue(event?.target?.value)
+        }
+    }
+
     return (
         <>
                         <TextField
@@ -32,7 +41,8 @@ const DatePicker = () => {
                                     },
                                 }
                             }}
-                            
+                            value={value ? value : undefined}
+                            onChange={onChange}
                         />
         </>
     );

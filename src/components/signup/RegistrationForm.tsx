@@ -4,6 +4,7 @@ import DatePicker from '../common/DatePicker';
 import { API } from '../../common/Constants';
 import { showMessage } from '../../common/Utils';
 import { useAuth } from '../../hook/authContext';
+import moment from 'moment'
 
 interface Props {
     setProgress: (porgress: boolean)=>{}
@@ -22,6 +23,7 @@ const RegistrationForm = ({setProgress, onSuccess}) => {
     const[confirmPassword, setConfirmPassword] = useState<string>();
     const[email, setEmail] = useState<string>();
     const[phoneNumber, setPhoneNumber] = useState<string>();
+    const[dateOfBirth, setDateOfBirth] = useState<string>();
 
     useEffect(() => {
         setProgress(isLoading)
@@ -58,6 +60,7 @@ const RegistrationForm = ({setProgress, onSuccess}) => {
         setConfirmPassword('')
         setEmail('')
         setPhoneNumber('')
+        setDateOfBirth(undefined)
     }
 
     const handleSubmit = (event) => {
@@ -74,7 +77,8 @@ const RegistrationForm = ({setProgress, onSuccess}) => {
                     username: username,
                     password: password,
                     email: email,
-                    phoneNumber: Number(phoneNumber)
+                    phoneNumber: Number(phoneNumber),
+                    dob: moment(dateOfBirth, "YYYY-MM-DD").unix()
                 }
             );
         } else {
@@ -100,7 +104,7 @@ const RegistrationForm = ({setProgress, onSuccess}) => {
                             onChange={(e)=>setLastName(e.target.value)} value={lastName}/>
                         </div>
                         <div className="single-input-field">
-                            <DatePicker/>
+                            <DatePicker value={dateOfBirth} setValue={setDateOfBirth}/>
                         </div>
                         <div className="single-input-field">
                             <input type="email" name='email' autoComplete='off' placeholder="Email *" required={true}

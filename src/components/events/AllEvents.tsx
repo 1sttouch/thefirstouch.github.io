@@ -5,6 +5,7 @@ import Spinner from '../common/Spinner';
 import PurchaseItemCard from '../PurchaseItemCard';
 import { showMessage } from '../../common/Utils';
 import { Fade } from 'react-reveal';
+import NoData from '../common/NoData';
 
 const AllEvents = () => {
     const {isLoading, error, data, status, callFetch } = useFetch();
@@ -12,7 +13,7 @@ const AllEvents = () => {
 
     useEffect(() => {
         if(error){
-            showMessage(error.response.data,'ERROR')
+            showMessage(error.response?.data,'ERROR')
         }
     }, [error]);
     
@@ -40,14 +41,19 @@ const AllEvents = () => {
             <section className="event-sec pt-100 pb-100">
                 <div className="container">
                     <div className="row">
-                        {events.map(event =>
-                            <div className="col-xl-6 col-lg-12" key={event.id}>
-                                {/* <SingleEvent event={event} /> */}
-                                <Fade right delay={100}>
-                                    <PurchaseItemCard purchaseItem={event} showActionBar showAddToCart/>
-                                </Fade>
-                            </div>
-                        )}
+                        {
+                        events?.length ? 
+                            events.map(event =>
+                                <div className="col-xl-4 col-lg-12" key={event._id}>
+                                    <Fade right delay={100}>
+                                        <PurchaseItemCard 
+                                        itemLink={`/events/event-details?id=${event._id}`}
+                                        maxWidth={400} purchaseItem={event} showActionBar showAddToCart/>
+                                    </Fade>
+                                </div>
+                            )
+                            : <NoData/>
+                        }
                         {/* <Pagination /> */}
                     </div>
                 </div>

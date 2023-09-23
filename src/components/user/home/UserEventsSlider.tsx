@@ -20,7 +20,10 @@ const UserEvents = () => {
         if(events){
             let items :React.JSX.Element[] =[]
             events.map(event =>
-                items.push(<PurchaseItemCard purchaseItem={event} showAddToCart/>)
+                items.push(<PurchaseItemCard 
+                    itemLink={`/events/event-details?id=${event?._id}`}
+                    purchaseItem={event} 
+                    showAddToCart/>)
             )
             setChildren(items)
         }

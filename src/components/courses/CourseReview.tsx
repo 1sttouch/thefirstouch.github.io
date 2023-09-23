@@ -1,5 +1,5 @@
 import React from 'react';
-import CourseReviewData from '../../../jsonData/CourseReviewData.json'
+import CourseReviewData from '../../jsonData/CourseReviewData.json'
 import SingleCourseReview from './SingleCourseReview';
 
 const CourseReview = () => {

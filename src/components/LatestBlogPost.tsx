@@ -4,10 +4,7 @@ import SingleBlogPost from './SingleBlogPost';
 import Carousel from 'react-multi-carousel';
 
 
-const LatestBlogPost = (props) => {
-    const { blogStyle } = props;
-    const { blogBg } = props;
-
+const LatestBlogPost = () => {
     const CustomRightArrow = ({ onClick }) => {
         return <button className='commonArrow arrowRight' onClick={() => onClick()}><i className="fa-solid fa-chevron-right"></i></button>;
     };
@@ -19,7 +16,7 @@ const LatestBlogPost = (props) => {
 
     return (
         <>
-            <section className={`${blogBg} blog-sec pt-100 pb-70`}>
+            <section className={`home-v2 blog-sec pt-100 pb-70`}>
                 <div className="blog-sec-overlay overflow-hidden">
                     <div className="container">
                         <div className="row">
@@ -73,7 +70,7 @@ const LatestBlogPost = (props) => {
                                             }}>
 
                                             {BlogPostData.map(blog =>
-                                                <SingleBlogPost blog={blog} key={blog.id} blogStyle={blogStyle} />
+                                                <SingleBlogPost blog={blog} key={blog.id} blogStyle={"home-v2"} />
                                             )}
 
                                         </Carousel>

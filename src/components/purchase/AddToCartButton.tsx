@@ -24,7 +24,6 @@ const AddToCartButton = ({itemId, itemType}:Props) => {
     }, [status]);
 
     useEffect(() => {
-        console.log(error)
         if(error){
             showMessage(error?.response?.data,'ERROR')
         }

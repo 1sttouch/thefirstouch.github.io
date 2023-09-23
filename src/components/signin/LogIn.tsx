@@ -28,12 +28,10 @@ const LogIn = () => {
     const onSuccess = (data) => {
         setAuthToken(data?.token)
         let path = searchParams.get('path')
-        console.log('on success')
+      
         if(path){
-            console.log('path',path)
             navigate(path)
         } else {
-            console.log('home')
             navigate('/user-home');
         }     
     };

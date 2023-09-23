@@ -32,7 +32,7 @@ const LoginForm = ({setProgress, onSuccess}) => {
 
     useEffect(() => {
         if(error){
-            showMessage(error.response.data,'ERROR')
+            showMessage(error.response?.data,'ERROR')
         }
     }, [error]);
 

@@ -17,7 +17,7 @@ const SingleCourse = ({ course }:Props) => {
                 <div className="course-thumb">
                     <img src={`${image}`} alt="courseImage" />
                     <div className="read-more-button">
-                        <Link to="/course#">Learn More</Link>
+                        <Link to={`/learnings/learning?id=${_id}#`}>Learn More</Link>
                     </div>
                 </div>
                 <div className="course-meta">

@@ -32,7 +32,7 @@ const useFetch = ():FetchCall => {
         setIsLoading(true)
         const options = {
           method: method ? method : 'GET',
-          url: `http://localhost:5000/dev/v1/${endpoint}`,
+          url: `${import.meta.env.VITE_API_URI}/${endpoint}`,
           headers: {
             'Content-Type': 'application/json',
             ...headers

@@ -9,7 +9,7 @@ const Footer = () => {
                 <div className="footer-sec">
                     <div className="container">
                         <div className="row">
-                            <div className="col-lg-3 col-md-6">
+                            <div className="col-lg-4 col-md-6">
                                 <div className="footer-widget-one">
                                     <h2>About Us</h2>
                                     <p>Lorem ipsum dolor sit amet, luctus posuere semper felis consectetuer hendrerit, enim varius proi Lorem ipsum dolor sit amet</p>
@@ -28,7 +28,7 @@ const Footer = () => {
                                     </ul>
                                 </div>
                             </div> */}
-                            <div className="col-lg-3 col-md-6">
+                            <div className="col-lg-4 col-md-6">
                                 <div className="footer-widget-menu">
                                     <h2>Quick Links</h2>
                                     <ul>
@@ -39,7 +39,7 @@ const Footer = () => {
                                     </ul>
                                 </div>
                             </div>
-                            <div className="col-lg-3 col-md-6">
+                            <div className="col-lg-4 col-md-6">
                                 <div className="footer-widget-four">
                                     <h2>contact us </h2>
                                     <div className="inner-box">
