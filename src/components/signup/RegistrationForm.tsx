@@ -126,7 +126,7 @@ const RegistrationForm = ({setProgress, onSuccess}) => {
                             <input type="password" name='confirm-password' autoComplete='off' placeholder="Confirm Password *" required 
                             onChange={(e)=>setConfirmPassword(e.target.value)} value={confirmPassword}/>
                         </div>                   
-                        <button className='register-btn' type="submit" name='submit'>
+                        <button className='register-btn full-width' type="submit" name='submit'>
                             Register Now 
                         </button>
                     </div>

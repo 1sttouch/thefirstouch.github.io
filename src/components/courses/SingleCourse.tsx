@@ -8,7 +8,7 @@ interface Props {
 }
 
 const SingleCourse = ({ course }:Props) => {
-    let { _id, type ,image, ratting, amount, title, description, duration } = course
+    let { id, type ,image, ratting, amount, title, description, duration } = course
 
     return (
         <>
@@ -17,7 +17,7 @@ const SingleCourse = ({ course }:Props) => {
                 <div className="course-thumb">
                     <img src={`${image}`} alt="courseImage" />
                     <div className="read-more-button">
-                        <Link to={`/learnings/learning?id=${_id}#`}>Learn More</Link>
+                        <Link to={`/learnings/learning?id=${id}#`}>Learn More</Link>
                     </div>
                 </div>
                 <div className="course-meta">
@@ -39,7 +39,7 @@ const SingleCourse = ({ course }:Props) => {
                         <li><Link to="#"><i className="fa-regular fa-clock"></i>{durationInHoursMins(duration)}</Link></li>
                         {/* <li><Link onClick={handleSave}><i className="fa fa-heart"></i>{"save"}</Link></li> */}
                         {/* <li><Link onClick={undefined}><i className="fa fa-shopping-cart"></i>{"Add to Cart"}</Link></li> */}
-                        <li><AddToCartButton itemId={_id} itemType={type}/></li>
+                        <li><AddToCartButton itemId={id} itemType={type}/></li>
                     </ul>
                 </div>
             </div>

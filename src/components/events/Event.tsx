@@ -22,7 +22,7 @@ const Event = () => {
             let items :React.JSX.Element[] =[]
             events.map(event =>
                 items.push(<PurchaseItemCard
-                    itemLink={`/events/event-details?id=${event._id}`}
+                    itemLink={`/events/event-details?id=${event.id}`}
                     purchaseItem={event} showActionBar showAddToCart/>)
             )
             setChildren(items)

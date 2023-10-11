@@ -12,7 +12,7 @@ const OrderView = ({order}:Props) => {
     const [purcahseItems, setPurcahseItems] = useState<any>([]);
 
     useEffect(() => {
-            callFetch(API.ORDER + "/" + order?._id,
+            callFetch(API.ORDER + "/" + order?.id,
             'GET',
             getAPIHeaders(),
             null,
@@ -31,7 +31,7 @@ const OrderView = ({order}:Props) => {
             {purcahseItems.map(item =>
                 <PurchaseItemCard 
                 purchaseItem={item}
-                key={item._id} />
+                key={item.id} />
             )}
         </>
     );

@@ -19,7 +19,7 @@ const UserLearnings = () => {
             let items :React.JSX.Element[] =[]
             learnings.map(learning =>
                 items.push(<PurchaseItemCard 
-                     itemLink={`/user-touchpoints/touchpoint?id=${learning._id}`}
+                     itemLink={`/user-touchpoints/touchpoint?id=${learning.id}`}
                      purchaseItem={learning} showRatting/>)
             )
             setChildren(items)

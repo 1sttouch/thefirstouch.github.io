@@ -15,7 +15,7 @@ interface Props {
 const ContactInfoEdit = ({setEnableEdit, userInfo, setProgress}: Props) => {
     const {isLoading, error, data, status, callFetch } = useFetch();
     
-    const[profileId, setProfileId] = useState<string | undefined>(userInfo?._id);
+    const[profileId, setProfileId] = useState<string | undefined>(userInfo?.id);
     const[firstName, setFirstName] = useState<string | undefined>(userInfo?.firstName);
     const[lastName, setLastName] = useState<string | undefined>(userInfo?.lastName);
     const[email, setEmail] = useState<string| undefined>(userInfo?.email);
@@ -47,7 +47,7 @@ const ContactInfoEdit = ({setEnableEdit, userInfo, setProgress}: Props) => {
             getAPIHeaders(),
             null,
             {
-                _id: profileId,
+                id: profileId,
                 firstName: firstName,
                 lastName: lastName,
                 email: email,

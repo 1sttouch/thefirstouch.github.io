@@ -20,7 +20,7 @@ const Journies = () => {
                 items.push(<PurchaseItemCard 
                     maxWidth={400} 
                     purchaseItem={learning} 
-                    itemLink={`/user-touchpoints/touchpoint?id=${learning._id}`}
+                    itemLink={`/user-touchpoints/touchpoint?id=${learning.id}`}
                     showRatting/>)
             )
             setChildren(items)

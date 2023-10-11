@@ -38,7 +38,7 @@ const HomeEvent = () => {
         <>
             <h1 className="faq-style1-title">Join Our Event</h1>
             {events.slice(0, 3).map(event =>
-                <SingleEvent event={event} key={event._id} />
+                <SingleEvent event={event} key={event.id} />
             )}
         </>
     );

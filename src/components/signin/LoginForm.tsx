@@ -3,6 +3,7 @@ import useFetch from '../../hook/useFetch';
 import { API }  from '../../common/Constants'
 import { showMessage } from '../../common/Utils';
 import { useAuth } from '../../hook/authContext';
+import { HashLink as Link } from 'react-router-hash-link';
 
 interface Props {
     setProgress: (porgress: boolean)=>{}
@@ -59,7 +60,7 @@ const LoginForm = ({setProgress, onSuccess}) => {
     return (
         <>
             <div className="join-us-form position-relative">
-                <h1 className="join-us-form-title">Login Form</h1>
+                <h1 className="join-us-form-title">Login with credentials</h1>
                 <form onSubmit={handleSubmit}>
                     <div className="join-us-field">
                         <div className="single-input-field">
@@ -70,7 +71,7 @@ const LoginForm = ({setProgress, onSuccess}) => {
                             <input type="password" name='password' autoComplete='off' placeholder="Password *" required={true}
                             onChange={(e)=>setPassword(e.target.value)} value={password}/>
                         </div>
-                        <button className='register-btn' type="submit" name='submit'>Login Now</button>
+                        <button className='register-btn full-width' type="submit" name='submit'>Login Now</button>
                     </div>
                 </form>
             </div>

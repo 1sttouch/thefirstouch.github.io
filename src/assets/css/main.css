@@ -2842,7 +2842,22 @@ a.blog-read-more::before {
 	line-height: 46px;
 }
 
+.join-us-desc h2 {
+	color: #fff;
+	font-size: 26px;
+	text-transform: uppercase;
+	line-height: 26px;
+}
+
+.join-us-desc h2 a {
+	cursor: pointer;
+}
+
 .join-us-desc h1 span {
+	color: #f1c40f
+}
+
+.join-us-desc h2 span {
 	color: #f1c40f
 }
 
@@ -5282,4 +5297,8 @@ footer.footer {
 	color: #f1c40f;
 }
 
+
+.full-width {
+	width: 100%;
+}
 /* --------------- The End --------------- */

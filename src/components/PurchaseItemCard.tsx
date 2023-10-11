@@ -74,7 +74,7 @@ function PurchaseItemCard({purchaseItem, showAddToCart, showRatting, showActionB
       </CardContent>
      { showActionBar ? <CardActions className='course-info' >
         {/* <Button size="small">Share</Button> */}
-        { showAddToCart ? <AddToCartButton itemId={purchaseItem?._id} itemType={purchaseItem?.type}/> : <></> }
+        { showAddToCart ? <AddToCartButton itemId={purchaseItem?.id} itemType={purchaseItem?.type}/> : <></> }
         
       </CardActions> : <></>}
     </Card>

@@ -33,7 +33,7 @@ const PlaceOrderForm = ({order, setProgress, onSuccess}) => {
 
     const handleSubmit = () => {
        
-            callFetch(API.CONFIRM_ORDER + "/" + order?._id,
+            callFetch(API.CONFIRM_ORDER + "/" + order?.id,
                 'POST',
                 getAPIHeaders(),
                 null,

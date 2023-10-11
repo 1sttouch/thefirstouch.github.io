@@ -9,7 +9,7 @@ export interface UserInfo {
     phoneNumber: number
     email: string
     dob: number
-    _id: string
+    id: string
 }
 
 const ContactInfo = () => {

@@ -20,7 +20,7 @@ const LearningsSlider = () => {
             let items :React.JSX.Element[] =[]
             courses.map(course =>
                 items.push(<PurchaseItemCard 
-                    itemLink={`/learnings/learning?id=${course?._id}`}
+                    itemLink={`/learnings/learning?id=${course?.id}`}
                     purchaseItem={course} showActionBar showAddToCart/>)
             )
             setChildren(items)

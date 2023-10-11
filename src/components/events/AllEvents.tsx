@@ -44,10 +44,10 @@ const AllEvents = () => {
                         {
                         events?.length ? 
                             events.map(event =>
-                                <div className="col-xl-4 col-lg-12" key={event._id}>
+                                <div className="col-xl-4 col-lg-12" key={event.id}>
                                     <Fade right delay={100}>
                                         <PurchaseItemCard 
-                                        itemLink={`/events/event-details?id=${event._id}`}
+                                        itemLink={`/events/event-details?id=${event.id}`}
                                         maxWidth={400} purchaseItem={event} showActionBar showAddToCart/>
                                     </Fade>
                                 </div>

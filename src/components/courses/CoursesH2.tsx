@@ -88,7 +88,7 @@ const CoursesH2 = () => {
                                             }}>
 
                                             {courses.map(course =>
-                                                <SingleCourse key={course._id} course={course} />
+                                                <SingleCourse key={course.id} course={course} />
                                             )}
 
                                         </Carousel>

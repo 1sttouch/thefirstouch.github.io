@@ -9,9 +9,11 @@ import { useParams } from 'react-router';
 import Spinner from '../common/Spinner';
 import { setAuthToken } from '../../common/Utils';
 import { useSearchParams } from 'react-router-dom'
+import LoginWithOTP from './LoginWithOTP';
 
 const LogIn = () => {
     const [inProgress, setProgress] = useState<boolean>(false);
+    const [showLogin, setShowLogin] = useState<boolean>(true);
     const navigate = useNavigate();
 
     const [searchParams, setSearchParams] = useSearchParams()
@@ -23,6 +25,14 @@ const LogIn = () => {
     const CustomLeftArrow = ({ onClick }) => {
         return <button className='commonArrow arrowLeft' onClick={() => onClick()}><i className="fa-solid fa-chevron-left"></i></button>;
 
+    };
+
+    const onForgetPassword = () => {
+        setShowLogin(false);
+    };
+
+    const onBackToLogin = () => {
+        setShowLogin(true);
     };
 
     const onSuccess = (data) => {
@@ -48,6 +58,13 @@ const LogIn = () => {
                                 <div className="join-us-desc">
                                     <h1>Login now & <span>Unlock our amazing courses</span> and start your journey</h1>
                                     <p>Join us for our online platform and get 150+ free course. Short Time This offer Limited. So You can as soon as possible register now. Lorem ipsum dolor sit amet, lorem nibh lectus urna arcu, lorem erat semper, auctor suspendisse quisque molestie ut.</p>
+
+                                    {
+                                        showLogin ? 
+                                            <h2><a onClick={onForgetPassword} >Click here to <span>login with OTP</span></a></h2>
+                                            :
+                                            <h2><a onClick={onBackToLogin}> Click here to <span>login with password</span></a></h2>
+                                    }
                                 </div>
                                 <div className="row">
                                     <div className="col-md-10">
@@ -116,9 +133,18 @@ const LogIn = () => {
                         </div>
 
                         <div className="col-lg-5 col-12">
-                            <Fade right>
-                                <LoginForm setProgress={setProgress} onSuccess={onSuccess}/>
-                            </Fade>
+                            {
+                                showLogin ?
+                                <Fade right>
+                                    <LoginForm setProgress={setProgress} onSuccess={onSuccess}/>
+                                </Fade>
+                                :
+                                <Fade right>
+                                    <LoginWithOTP setProgress={setProgress}/>
+                                </Fade>
+
+                            }
+
                         </div>
                     </div>
                 </div>

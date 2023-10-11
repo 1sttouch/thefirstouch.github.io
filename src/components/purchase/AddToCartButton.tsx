@@ -45,7 +45,7 @@ const AddToCartButton = ({itemId, itemType}:Props) => {
                 getAPIHeaders(),
                 null,
                 {
-                    _id : itemId,
+                    id : itemId,
                     type: itemType
                 }
             );

@@ -39,7 +39,7 @@ const AllCourses = () => {
                 <div className="container">
                     <div className="row">
                         {courses?.length ? courses.map(course =>
-                            <div className="col-lg-4 col-md-6 col-12" key={course._id}>
+                            <div className="col-lg-4 col-md-6 col-12" key={course.id}>
                                 <SingleCourse course={course}/>
                             </div>
                         ) : <NoData/>}
