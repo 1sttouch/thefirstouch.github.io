@@ -1237,6 +1237,37 @@ input[type=number] {
 	margin: 0 20px 40px 20px;
 }
 
+.course-page-sec .course-intro {
+	margin: 0px 0px 20px 0px;
+}
+
+.course-page-sec .course-intro p {
+	text-align: justify;
+	font-size: 18px;
+}
+
+.course-page-sec .course-intro p span {
+	font-style: italic;
+	font-weight: bold;
+    color: #011e40;
+}
+
+.course-page-heading h1 {
+	font-weight: bold;
+	text-transform: capitalize;
+	position: relative;
+	margin-bottom: 30px;
+}
+
+.course-page-heading h1::before {
+	content: "";
+	position: absolute;
+	bottom: -10px;
+	width: 80px;
+	height: 2px;
+	background: #f1c40f;
+}
+
 .read-more-button {
 	text-align: center;
 	position: absolute;
@@ -1295,6 +1326,14 @@ input[type=number] {
 	position: absolute;
 	left: 0;
 	transition: all 0.4s ease 0s;
+}
+
+.course-desc .course-details-short{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
 }
 
 .course-inner:hover .course-desc h2 a::before {

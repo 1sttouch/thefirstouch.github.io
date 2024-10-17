@@ -8,7 +8,7 @@ interface Props {
 }
 
 const SingleCourse = ({ course }:Props) => {
-    let { id, type ,image, ratting, amount, title, description, duration } = course
+    let { id, type ,image, ratting, amount, title, description, duration, details } = course
 
     return (
         <>
@@ -32,7 +32,7 @@ const SingleCourse = ({ course }:Props) => {
                 </div>
                 <div className="course-desc">
                     <h2><Link to="/course#">{title}</Link></h2>
-                    <p>{description}</p>
+                    <p className='course-details-short'>{details}</p>
                 </div>
                 <div className="course-info">
                     <ul>
