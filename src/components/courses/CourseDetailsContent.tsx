@@ -1,12 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import CourseDetailsInfo from './CourseDetailsInfo';
 import CourseOverView from './CourseOverView';
 import CourseCurriculum from './CourseCurriculum';
 import CourseInstructor from './CourseInstructor';
 import CourseReview from './CourseReview';
 import CourseWriteReview from './CourseWriteReview';
+import CourseData from '../../assets/contents/CoursesData.json';
+import { useSearchParams } from 'react-router-dom';
+
 
 const CourseDetailsContent = () => {
+    const [searchParams, setSearchParams] = useSearchParams();
+    const [course, setCourses] = useState<any>({}) ;
+
+    useEffect(() => {
+        let id = searchParams.get('id');
+        let obj = CourseData.find(item => item.id === id);
+        if (obj){
+            setCourses(obj)
+        }
+    }, [searchParams]);
+
     return (
         <>
             <section className="course-details-page pt-100 pb-70">
@@ -24,12 +38,12 @@ const CourseDetailsContent = () => {
                                     <li className="nav-item" role='presentation'>
                                         <button className="nav-link" id="instructor-tab" data-bs-target="#instructor-tab-pane" data-bs-toggle="tab" type="button" role="tab" aria-controls="instructor-tab-pane" aria-selected="false">Course Instructor</button>
                                     </li>
-                                    <li className="nav-item" role='presentation'>
+                                    {/* <li className="nav-item" role='presentation'>
                                         <button className="nav-link" id="course_review-tab" data-bs-target="#course_review-tab-pane" data-bs-toggle="tab" type="button" role="tab" aria-controls="course_review-tab-pane" aria-selected="false">Course Review</button>
                                     </li>
                                     <li className="nav-item" role='presentation'>
                                         <button className="nav-link" id="write_review-tab" data-bs-target="#write_review-tab-pane" data-bs-toggle="tab" type="button" role="tab" aria-controls="write_review-tab-pane" aria-selected="false">Write Review</button>
-                                    </li>
+                                    </li> */}
                                 </ul>
                             </div>
                         </div>
@@ -38,7 +52,7 @@ const CourseDetailsContent = () => {
 
                                 {/* --- OverView --- */}
                                 <div id="overview-tab-pane" tabIndex="0" className="tab-pane fade show active" role="tabpanel" aria-labelledby="overview-tab">
-                                    <CourseOverView />
+                                    <CourseOverView course={course} />
                                 </div>
 
                                 {/* --- curriculum --- */}
@@ -52,19 +66,19 @@ const CourseDetailsContent = () => {
                                 </div>
 
                                 {/* --- course_review --- */}
-                                <div id="course_review-tab-pane" tabIndex="0" className="tab-pane fade" role="tabpanel" aria-labelledby="course_review-tab">
+                                {/* <div id="course_review-tab-pane" tabIndex="0" className="tab-pane fade" role="tabpanel" aria-labelledby="course_review-tab">
                                     <CourseReview />
-                                </div>
+                                </div> */}
 
                                 {/* --- write_review --- */}
-                                <div id="write_review-tab-pane" tabIndex="0" className="tab-pane fade" role="tabpanel" aria-labelledby="write_review-tab">
+                                {/* <div id="write_review-tab-pane" tabIndex="0" className="tab-pane fade" role="tabpanel" aria-labelledby="write_review-tab">
                                     <CourseWriteReview />
-                                </div>
+                                </div> */}
 
                             </div>
                         </div>
                         <div className="col-lg-3 col-md-8">
-                            <CourseDetailsInfo />
+                            <CourseDetailsInfo course={course}/>
                         </div>
                     </div>
                 </div>

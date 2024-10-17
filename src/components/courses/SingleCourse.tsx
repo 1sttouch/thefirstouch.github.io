@@ -31,7 +31,7 @@ const SingleCourse = ({ course }:Props) => {
                     </span>
                 </div>
                 <div className="course-desc">
-                    <h2><Link to="/course#">{title}</Link></h2>
+                    <h2><Link to={`/learnings/learning?id=${id}`}>{title}</Link></h2>
                     <p className='course-details-short'>{details}</p>
                 </div>
                 <div className="course-info">

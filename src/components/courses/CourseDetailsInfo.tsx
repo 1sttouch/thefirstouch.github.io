@@ -1,7 +1,11 @@
 import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 
-const CourseDetailsInfo = () => {
+interface Props {
+    course? : any
+}
+
+const CourseDetailsInfo = ({course}) => {
     return (
         <>
             <div className="event-details-info">

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import CourseData from '../../assets/contents/learnings.json'
+import CourseData from '../../assets/contents/CoursesData.json'
 import SingleCourse from './SingleCourse';
 import useFetch from '../../hook/useFetch';
 import { getAPIHeaders, showMessage } from '../../common/Utils';

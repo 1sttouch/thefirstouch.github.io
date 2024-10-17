@@ -4,7 +4,7 @@ import Carousel from 'react-multi-carousel';
 import useFetch from '../../hook/useFetch';
 import { API } from '../../common/Constants';
 import NoData from '../common/NoData';
-import CourseData from '../../assets/contents/learnings.json';
+import CourseData from '../../assets/contents/CoursesData.json';
 
 const CoursesH2 = () => {
     const {isLoading, error, data, status, callFetch } = useFetch();
