@@ -1,0 +1,35 @@
+[
+    {
+        "id": "f493b5d7-f89d-4ff7-855a-ce8f9c150da4",
+        "title": "Future Pro - Campus to Corporate Program",
+        "description": "This program is targeted fro college students for fastracking their carrier",
+        "amount": 280.0,
+        "type": "LEARNING",
+        "image": "/img/courses/course_1.jpg",
+        "duration": 4500,
+        "ratting": 4,
+        "details": "This course helps young graduates transition from an academic environment to the professional world. It focuses on essential skills like mindset shift, interpersonal skills, and business communication. By offering job-hunting guidance and professional readiness, we provide thorough support to their career journey."
+    },
+    {
+        "id": "4fbe2f85-9e9b-406c-aedb-8e9290f27913",
+        "title": "Career Communication Catalyst: One Student - One Teacher",
+        "description": "This class is for 10+ students",
+        "amount": 280.0,
+        "type": "LEARNING",
+        "image": "/img/courses/course_1.jpg",
+        "duration": 0,
+        "ratting": 4,
+        "details": "Our one-to-one Career Communication Catalyst program is designed to address the unique communication challenges that professionals face at different stages of their careers. Whether you're a first-time employee striving to make a strong impression, a mid-level manager looking to enhance team interactions, a senior leader aiming to communicate with greater impact, or even a non-executive staff member seeking a promotion—this program is tailored for you.<br/>Through personalised sessions, we delve into your specific communication roadblocks and create a step-by-step plan to help you express your ideas clearly, build better relationships, and achieve your professional goals. Regardless of your role or experience level, Career Communication Catalyst offers the tools and strategies to refine your communication and unlock your career potential."
+    },
+    {
+        "id": "c9a646ec-7cb6-4423-9cce-d02ebb8cc392",
+        "title": "The Navigator",
+        "description": "This class is for 10+ students",
+        "amount": 280.0,
+        "type": "LEARNING",
+        "image": "/img/courses/course_1.jpg",
+        "duration": 0,
+        "ratting": 4,
+        "details" :"In a world where change is the only constant, making decisions about your child’s academic, extracurricular, and career path can feel overwhelming. That’s where we come in! “The Navigator” is your go-to partner in guiding students toward bright futures, one step at a time.<br/>We’re not just about academics; we focus on the whole picture—interests, passions, talents, and everything that makes your child unique. With an ongoing relationship that connects students, parents, and schools, we ensure your child’s journey is supported from every angle."
+    }
+]

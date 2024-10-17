@@ -1256,6 +1256,7 @@ input[type=number] {
 }
 
 .course-desc {
+	height: 150px;
 	padding: 10px 20px;
 	margin-top: 10px;
 	border-bottom: 1px solid #f4f4f4;

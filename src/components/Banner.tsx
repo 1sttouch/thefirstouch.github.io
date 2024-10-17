@@ -1,5 +1,5 @@
 import React from 'react';
-import BannerData from '../jsonData/BannerData.json'
+import BannerData from '../assets/contents/BannerData.json'
 import Carousel from 'react-multi-carousel';
 import SingleBanner from './SingleBanner';
 

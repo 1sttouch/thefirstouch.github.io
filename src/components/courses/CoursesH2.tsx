@@ -4,25 +4,26 @@ import Carousel from 'react-multi-carousel';
 import useFetch from '../../hook/useFetch';
 import { API } from '../../common/Constants';
 import NoData from '../common/NoData';
+import CourseData from '../../assets/contents/learnings.json';
 
 const CoursesH2 = () => {
     const {isLoading, error, data, status, callFetch } = useFetch();
-    const [courses, setCourses] = useState<any>([]);
+    const [courses, setCourses] = useState<any>(CourseData);
 
-    useEffect(() => {
-        callFetch(API.SEARCH_LEARNINGS,
-            'GET',
-            null,
-            null,
-            null
-        );
-    }, []);
+    // useEffect(() => {
+    //     callFetch(API.SEARCH_LEARNINGS,
+    //         'GET',
+    //         null,
+    //         null,
+    //         null
+    //     );
+    // }, []);
 
-    useEffect(() => {
-        if(data){
-            setCourses(data)
-        }
-    }, [data]);
+    // useEffect(() => {
+    //     if(data){
+    //         setCourses(data)
+    //     }
+    // }, [data]);
 
     const CustomRightArrow = ({ onClick }) => {
         return <button className='commonArrow arrowRight' onClick={() => onClick()}><i className="fa-solid fa-chevron-right"></i></button>;

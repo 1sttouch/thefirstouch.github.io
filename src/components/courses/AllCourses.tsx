@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import CourseData from '../../jsonData/CourseData.json'
+import CourseData from '../../assets/contents/learnings.json'
 import SingleCourse from './SingleCourse';
 import useFetch from '../../hook/useFetch';
 import { getAPIHeaders, showMessage } from '../../common/Utils';
@@ -9,28 +9,28 @@ import NoData from '../common/NoData';
 
 const AllCourses = () => {
     const {isLoading, error, data, status, callFetch } = useFetch();
-    const [courses, setCourses] = useState<any>([]);
+    const [courses, setCourses] = useState<any>(CourseData);
 
-    useEffect(() => {
-        callFetch(API.SEARCH_LEARNINGS,
-            'GET',
-            null,
-            null,
-            null
-        );
-    }, []);
+    // useEffect(() => {
+    //     callFetch(API.SEARCH_LEARNINGS,
+    //         'GET',
+    //         null,
+    //         null,
+    //         null
+    //     );
+    // }, []);
 
-    useEffect(() => {
-        if(data){
-            setCourses(data)
-        }
-    }, [data]);
+    // useEffect(() => {
+    //     if(data){
+    //         setCourses(data)
+    //     }
+    // }, [data]);
 
-    useEffect(() => {
-        if(error){
-            showMessage(error.response?.data,'ERROR')
-        }
-    }, [error]);
+    // useEffect(() => {
+    //     if(error){
+    //         showMessage(error.response?.data,'ERROR')
+    //     }
+    // }, [error]);
 
     return (
         <>

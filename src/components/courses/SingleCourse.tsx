@@ -39,7 +39,7 @@ const SingleCourse = ({ course }:Props) => {
                         <li><Link to="#"><i className="fa-regular fa-clock"></i>{durationInHoursMins(duration)}</Link></li>
                         {/* <li><Link onClick={handleSave}><i className="fa fa-heart"></i>{"save"}</Link></li> */}
                         {/* <li><Link onClick={undefined}><i className="fa fa-shopping-cart"></i>{"Add to Cart"}</Link></li> */}
-                        <li><AddToCartButton itemId={id} itemType={type}/></li>
+                        {/* <li><AddToCartButton itemId={id} itemType={type}/></li> */}
                     </ul>
                 </div>
             </div>

@@ -61,7 +61,7 @@ const HeaderMainMenu = (props) => {
 							</>
 							:
 							<>
-								<div className="col-lg-1 d-none d-lg-block apply-button-area"
+								{/* <div className="col-lg-1 d-none d-lg-block apply-button-area"
 											style={{position: 'absolute', right: "200px", minWidth: "140px"}}>
 									<div className="apply-button">
 									<Link to="/signup#">Sign Up</Link>
@@ -73,7 +73,7 @@ const HeaderMainMenu = (props) => {
 									<div className="apply-button">
 										<Link to="/signin#">Log In</Link>
 									</div>
-								</div>
+								</div> */}
 							</>
 						}
 						<div className="col-md-9 col-7 d-lg-none" >

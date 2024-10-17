@@ -1,0 +1,36 @@
+[
+    {
+        "id": "fcf6c37d-5333-4b6e-a0b0-fda41d721827",
+        "title": "Luton live telecast",
+        "description": "BYOB and watch Chelsea match on big screen",
+        "amount": 120.0,
+        "type": "EVENT",
+        "image": "/img/event/g1.jpg",
+        "startTime": 1695280302,
+        "endTime": 1695337902,
+        "location": "Pragati Miadan, Delhi"
+    },
+    {
+        "id": "fcf6c37d-5333-4b6e-a0b0-fda41d721827",
+        "title": "Luton live telecast",
+        "description": "BYOB and watch Chelsea match on big screen",
+        "amount": 120.0,
+        "type": "EVENT",
+        "image": "/img/event/g1.jpg",
+        "startTime": 1695280302,
+        "endTime": 1695337902,
+        "location": "Pragati Miadan, Delhi"
+    },
+    {
+        "id": "fcf6c37d-5333-4b6e-a0b0-fda41d721827",
+        "title": "Luton live telecast",
+        "description": "BYOB and watch Chelsea match on big screen",
+        "amount": 120.0,
+        "type": "EVENT",
+        "image": "/img/event/g1.jpg",
+        "startTime": 1695280302,
+        "endTime": 1695337902,
+        "location": "Pragati Miadan, Delhi"
+    }
+
+]

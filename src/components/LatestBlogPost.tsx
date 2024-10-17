@@ -1,5 +1,5 @@
 import React from 'react';
-import BlogPostData from '../jsonData/BlogPostData.json';
+import BlogPostData from  '../assets/contents/BlogPostData.json';
 import SingleBlogPost from './SingleBlogPost';
 import Carousel from 'react-multi-carousel';
 

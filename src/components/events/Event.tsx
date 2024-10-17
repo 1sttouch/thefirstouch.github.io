@@ -10,10 +10,11 @@ import { API } from '../../common/Constants';
 import NoData from '../common/NoData';
 import EventsSlider from './EventsSlider';
 import PurchaseItemCard from '../PurchaseItemCard';
+import EventsData from '../../assets/contents/events.json'
 
 const Event = () => {
     const {isLoading, error, data, status, callFetch } = useFetch();
-    const [events, setEvents] = useState<any>([]);
+    const [events, setEvents] = useState<any>(EventsData);
     const [children, setChildren] = useState<React.JSX.Element[]>([]);
 
     useEffect(() => {
@@ -37,23 +38,24 @@ const Event = () => {
     }, [error]);
 
     
-    useEffect(() => {
-        callFetch(API.GET_EVENTS,
-            'GET',
-            null,
-            {
-                'endTime': 1726960302,
-                'startTime':1693632594
-            },
-            null
-        );
-    }, []);
+    // useEffect(() => {
+    //     callFetch(API.GET_EVENTS,
+    //         'GET',
+    //         null,
+    //         {
+    //             'endTime': 1726960302,
+    //             'startTime':1693632594
+    //         },
+    //         null
+    //     );
+    // }, []);
 
-    useEffect(() => {
-        if(data){
-            setEvents(data)
-        }
-    }, [data]);
+    // useEffect(() => {
+    //     if(data){
+    //         setEvents(data)
+    //     }
+    // }, [data]);
+
     const CustomRightArrow = ({ onClick }) => {
         return <button className='commonArrow arrowRight' onClick={() => onClick()}><i className="fa-solid fa-chevron-right"></i></button>;
     };
