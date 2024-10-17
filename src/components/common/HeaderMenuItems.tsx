@@ -18,15 +18,15 @@ const HeaderMenuItems = () => {
                             !isLoggedIn ?
                             <Link to="/">Home</Link>
                             :
-                            <Link to="/user-home">My View</Link>
+                            <Link to="/">Home</Link>// <Link to="/user-home">My View</Link>
                             }
                         </li>
                         <li>
-                            <Link to="/learnings#">Learnings</Link>
+                            <Link to="/learnings#">Programs</Link>
                         </li>
-                        <li>
+                        {/* <li>
                             <Link to="/events#">Events</Link>
-                        </li>
+                        </li> */}
                         <li><Link to="/about#">About Us</Link></li>
                         <li><Link to="/contact#">Contact Us</Link></li>
                     </ul>

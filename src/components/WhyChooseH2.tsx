@@ -1,5 +1,5 @@
 import React from 'react';
-import WhyChooseData from '../jsonData/WhyChooseData.json'
+import WhyChooseData from '../assets/contents/WhyChooseData.json'
 import Carousel from 'react-multi-carousel'
 import SingleChooseH2 from './SingleChooseH2'
 

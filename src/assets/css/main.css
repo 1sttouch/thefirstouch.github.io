@@ -575,19 +575,25 @@ input[type=number] {
 
 .menu {
 	display: inline-block;
-	position: relative
+	position: relative;
+	width: 100%;
 }
 
 .main-menu {
-	display: inline-block;
+	display: flex;
 	text-align: right;
-	margin-right: 40px;
+	margin: 0 40px 0 40px;
+	width: 100%;
+	justify-content: center;
 }
 
 .main-menu ul {
 	margin: 0;
 	padding: 0;
 	position: relative;
+	justify-content: space-between;
+    display: flex;
+	width: 100%;
 }
 
 .main-menu ul li {
@@ -602,7 +608,7 @@ input[type=number] {
 
 .main-menu ul li a {
 	display: block;
-	font-size: 16px;
+	font-size: 22px;
 	padding: 40px 12px;
 	text-decoration: none;
 	text-transform: capitalize;
@@ -1804,6 +1810,7 @@ input[type=number] {
 	background: #fff;
 	border: 1px solid #ddd;
 	border-top: 0px;
+	height: 280px;
 }
 
 .why-choose-inner {

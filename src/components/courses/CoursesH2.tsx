@@ -54,10 +54,10 @@ const CoursesH2 = () => {
                                             draggable={true}
                                             arrows={true}
                                             pauseOnHover={true}
-                                            slidesToSlide={1}
+                                            slidesToSlide={3}
                                             showDots={false}
                                             swipeable={true}
-                                            autoPlay={false}
+                                            autoPlay={true}
                                             autoPlaySpeed={3000}
                                             customRightArrow={<CustomRightArrow onClick={undefined} />}
                                             customLeftArrow={<CustomLeftArrow onClick={undefined} />}

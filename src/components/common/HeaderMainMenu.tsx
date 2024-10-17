@@ -48,7 +48,7 @@ const HeaderMainMenu = (props) => {
 						{
 							isLoggedIn ?
 							<>							
-							<div className="col-lg-1 d-none d-lg-block apply-button-area" style={{position: 'absolute', right: "140px"}}>
+							{/* <div className="col-lg-1 d-none d-lg-block apply-button-area" style={{position: 'absolute', right: "140px"}}>
 								<div className="apply-button" > 
 									<UserIconButton/>
 								</div>
@@ -57,7 +57,7 @@ const HeaderMainMenu = (props) => {
 								<div className="apply-button" > 
 									<CartIconButton/>
 								</div>
-							</div>
+							</div> */}
 							</>
 							:
 							<>

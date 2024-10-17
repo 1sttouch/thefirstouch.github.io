@@ -14,7 +14,7 @@ const Home2 = () => {
             <Banner />
             <WhyChooseH2 />
             <CoursesH2/>
-            <Event />
+            {/* <Event /> */}
             <LatestBlogPost/>
             <Footer />
         </>
