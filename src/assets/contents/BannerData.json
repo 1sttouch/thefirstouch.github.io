@@ -4,23 +4,31 @@
         "title": "FEEL The First Touch",
         "text": "Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit tortor et sapien donec ac nec. Nam vel eu amet",
         "image": "slide1.jpg",
-        "btn-1": "/about",
-        "btn-2": "/contact"
+        "about_us_btn": "/about/#feel-the-touch",
+        "contact_us_btn": "/contact"
     },
     {
         "id": 2,
         "title": "Our Ideology",
         "text": "Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit tortor et sapien donec ac nec. Nam vel eu amet",
         "image": "slide2.jpg",
-        "btn-1": "/about",
-        "btn-2": "/contact"
+        "about_us_btn": "/about/#ideology",
+        "contact_us_btn": "/contact"
+    },
+    {
+        "id": 2,
+        "title": "Why Work with Us?",
+        "text": "Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit tortor et sapien donec ac nec. Nam vel eu amet",
+        "image": "slide2.jpg",
+        "about_us_btn": "/about/#why-us",
+        "contact_us_btn": "/contact"
     },
     {
         "id": 3,
         "title": "Research Models",
         "text": "Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit tortor et sapien donec ac nec. Nam vel eu amet",
         "image": "slide2.jpg",
-        "btn-1": "/about",
-        "btn-2": "/contact"
+        "about_us_btn": "/about/#methodology",
+        "contact_us_btn": "/contact"
     }
 ]

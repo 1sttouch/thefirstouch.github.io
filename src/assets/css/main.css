@@ -1216,6 +1216,20 @@ input[type=number] {
 	position: absolute;
 }
 
+.course-sec .sec-desc {
+	text-transform: capitalize;
+	color: #fff;
+	z-index: 22;
+	position: absolute;
+}
+
+.course-sec .sec-desc p span {
+	font-size: 18px;
+	color: #fff;
+	z-index: 22;
+	position: absolute;
+}
+
 .course-inner {
 	box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.1);
 	background: #fff;

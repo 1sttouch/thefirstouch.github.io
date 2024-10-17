@@ -20,6 +20,7 @@ import React from 'react';
 import PreLoader from './components/PreLoader';
 import ScrollUpBtn from './components/ScrollUpBtn';
 import About from './pages/About';
+import AboutFull from './pages/AboutFull';
 import Contact from './pages/Contact';
 import Course from './pages/Course';
 import Error404 from './pages/Error404';
@@ -70,7 +71,8 @@ function App() {
             <Route path='/events' element={<Events />}> </Route>
             <Route path='/events/event-details' element={<EventDetails />}> </Route>
 
-            <Route path='/about' element={<About />}> </Route>
+            {/* <Route path='/about' element={<About />}> </Route> */}
+            <Route path='/about' element={<AboutFull />}> </Route>
 
             <Route path='/faq' element={<Faq />}> </Route>
             <Route path='/error' element={<Error404 />}> </Route>
