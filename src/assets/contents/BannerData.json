@@ -4,7 +4,7 @@
         "title": "FEEL The First Touch",
         "text": "At The First Touch, our guiding philosophy centres around empowering individuals to achieve their highest potential and excel in all aspects of life. We are committed to fostering a nurturing, inclusive environment where learners from diverse backgrounds can flourish and reach new heights.",
         "image": "slide1.jpg",
-        "about_us_btn": "/about/#feel-the-touch",
+        "about_us_btn": "/about?sec=feel-the-touch",
         "contact_us_btn": "/contact"
     },
     {
@@ -12,7 +12,7 @@
         "title": "Our Ideology",
         "text": "At The First Touch, our core ideology revolves around empowering individuals to achieve their full potential and excel in their personal and professional lives. We believe in providing a supportive and inclusive learning environment where individuals from diverse backgrounds can grow and thrive.",
         "image": "slide2.jpg",
-        "about_us_btn": "/about/#ideology",
+        "about_us_btn": "/about?sec=ideology",
         "contact_us_btn": "/contact"
     },
     {
@@ -20,7 +20,7 @@
         "title": "Why Work with Us?",
         "text": "At The First Touch, we take pride in offering a comprehensive, personalised approach to learning and development. Here are just a few reasons why you should choose us for your English language proficiency courses and training programs.",
         "image": "slide2.jpg",
-        "about_us_btn": "/about/#why-us",
+        "about_us_btn": "/about?sec=why-us",
         "contact_us_btn": "/contact"
     },
     {
@@ -28,7 +28,7 @@
         "title": "Research Models",
         "text": "At The First Touch we employ evidence-based approaches to design and deliver our courses, ensuring that our training is both effective and impactful for our participants. We leverage research models and methodologies from the fields of education, learning, and professional development to create engaging, hands-on learning experiences.",
         "image": "slide2.jpg",
-        "about_us_btn": "/about/#methodology",
+        "about_us_btn": "/about?sec=methodology",
         "contact_us_btn": "/contact"
     }
 ]

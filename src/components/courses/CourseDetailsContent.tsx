@@ -10,7 +10,7 @@ import { useSearchParams } from 'react-router-dom';
 
 
 const CourseDetailsContent = () => {
-    const [searchParams, setSearchParams] = useSearchParams();
+    const [searchParams] = useSearchParams();
     const [course, setCourses] = useState<any>({}) ;
 
     useEffect(() => {

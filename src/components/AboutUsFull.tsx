@@ -1,17 +1,31 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Fade } from 'react-reveal';
 import Pulse from 'react-reveal/Pulse';
 import { HashLink as Link } from 'react-router-hash-link';
-import videoThumb from '/img/about/video_thumb.jpg'
+import { useSearchParams } from 'react-router-dom';
 
 const AboutUsFull = (props) => {
     const { bgGray } = props;
+    const [searchParams] = useSearchParams();
+    
+    useEffect(() => {
+        let id = searchParams.get("sec")
+        if (id){
+            
+            const element = document.getElementById(id);
+            element?.scrollIntoView({
+                block: "nearest",
+                inline: "nearest",
+                behavior: "smooth",
+            });
+        }
+    }, [searchParams]);
 
     return (
         <>
             <section className={`${bgGray} about-us-sec pt-100 pb-70`}>
                 <div className="container">
-                    <div className="row">
+                    <div id="feel-the-touch" className="row">
                         <div className="col-lg-12 col-12">
                             <div className="about-desc">
                                 <Fade left delay={200}>
