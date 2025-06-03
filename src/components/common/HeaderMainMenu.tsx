@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
-import logo from '/img/comment/commenter_1.jpg'
+import logo from '/img/comment/logo.png'
 import MenuItems from './HeaderMenuItems';
 import OffCanvasMenu from './OffCanvasMenu';
 import { useAuth } from '../../hook/authContext';

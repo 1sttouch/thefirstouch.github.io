@@ -1,6 +1,6 @@
 import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
-import footerLogo from '/img/comment/commenter_1.jpg'
+import footerLogo from '/img/comment/logo.png'
 
 const Footer = () => {
     return (
