@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "image": "why_us_1.jpg",
+        "image": "customized_training.jpg",
         "icon": "employees.png",
         "title": "Customised Training",
         "text": "We understand that each individual and group has unique needs and goals. That's why we tailor our courses to meet the specific requirements of each participant, ensuring personalised attention and a tailored learning experience.",
@@ -9,7 +9,7 @@
     },
     {
         "id": 2,
-        "image": "why_us_2.jpg",
+        "image": "expert_Instructor.jpg",
         "icon": "statistics.png",
         "title": "Expert Instructor",
         "text": "Our team consists of seasoned professionals with extensive backgrounds in teaching, consulting, and learning and development. Their passion for helping others succeed, combined with their expertise, ensures you receive high-quality instruction and guidance throughout your training.",
@@ -17,7 +17,7 @@
     },
     {
         "id": 3,
-        "image": "why_us_3.jpg",
+        "image": "engaging_and_interactive_learning.jpg",
         "icon": "locked.png",
         "title": "Engaging and Interactive Learning",
         "text": "We emphasise active participation and experiential learning to keep you engaged and motivated. Through real-world scenarios, role-playing exercises, and collaborative activities, you'll be able to apply new knowledge and skills immediately.",
@@ -25,7 +25,7 @@
     },
     {
         "id": 4,
-        "image": "why_us_1.jpg",
+        "image": "comprehensive_assessment.jpg",
         "icon": "employees.png",
         "title": "Comprehensive Assessment",
         "text": "We use pre-course and post-course assessments to measure your progress and track your development. These evaluations allow us to set our course for the learning journey ahead, adjust our approach as needed, ensuring we achieve our learning objectives.",
@@ -33,7 +33,7 @@
     },
     {
         "id": 5,
-        "image": "why_us_2.jpg",
+        "image": "ongoing_support.jpg",
         "icon": "statistics.png",
         "title": "Ongoing Support",
         "text": "Our relationship with you doesn't end when the course does. We offer ongoing support and follow-up to help you apply what you've learned in your personal and professional life. We're here to answer any questions and provide guidance even after your training is complete. Let’s think of it as a lifetime relationship.",
@@ -41,7 +41,7 @@
     },
     {
         "id": 6,
-        "image": "why_us_3.jpg",
+        "image": "focus_on_employability.jpg",
         "icon": "locked.png",
         "title": "Focus on Employability",
         "text": "We prioritise practical skills and real-world applications to help you excel in the modern workplace. Our programs include guidance on job hunting, interview preparation, and workplace readiness, empowering you to thrive in your career.",
@@ -49,7 +49,7 @@
     },
     {
         "id": 7,
-        "image": "why_us_3.jpg",
+        "image": "flexible_learning_options.jpg",
         "icon": "locked.png",
         "title": "Flexible Learning Options:",
         "text": "We offer both online and offline courses, making it easy for you to fit learning into your schedule. Whether you prefer in-person sessions or virtual learning, we have options to suit your preferences. The calendar for the program is also created taking the learner’s preferences and availability into account.",
@@ -57,7 +57,7 @@
     },
     {
         "id": 8,
-        "image": "why_us_3.jpg",
+        "image": "holistic_approach.jpg",
         "icon": "locked.png",
         "title": "Holistic Approach",
         "text": "We consider all aspects of your development, including your mindset, skills, and confidence. Our holistic approach ensures you grow not only in your professional abilities but also in your personal well-being.",
